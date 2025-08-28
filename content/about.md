@@ -1,3 +1,11 @@
+---
+title: "About"
+layout: "page"
+url: "/about/"
+menu: "main"
+weight: 1
+---
+
 # 👋 Hi, I’m Sebastián Biagini 
 
 ## Professional Overview
