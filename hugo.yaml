@@ -17,7 +17,7 @@ params:
 
   homeInfoParams:
     Content: 
-      A blog about forensic genetics focusing on missing person identification.
+      A blog about biology, human genetics, and forensic insights powered by data science.
     Title: ""
     Photo: ""
 
