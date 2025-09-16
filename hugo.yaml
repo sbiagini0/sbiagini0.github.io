@@ -2,7 +2,7 @@ baseURL: 'https://sbiagini0.github.io/'
 languageCode: 'en-us'
 title: 'Sebastián Biagini'
 theme: 'PaperMod'
-googleAnalytics: 
+googleAnalytics: G-0Y2ZML5CCG
 markup:
   goldmark:
     renderer:
