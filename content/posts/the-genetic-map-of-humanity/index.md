@@ -230,14 +230,32 @@ groupings, while further away, yet still connected, the clusters of
 **Southeast Asia, Oceania, and East Asia** reflect those coastal
 eastward expansions.
 
-<div style="width:100%;max-width:700px;margin:1rem auto">
+<div class="pca-embed">
   <iframe
     src="/pca/pca3d_refs.html"
     title="PCA 3D — Populations"
-    style="display:block;width:100%;height:580px;border:0;overflow:hidden"
-    loading="lazy" allowfullscreen scrolling="no">
-  </iframe>
+    loading="lazy"
+    allowfullscreen
+    scrolling="no"></iframe>
 </div>
+
+<style>
+.pca-embed{
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 1rem auto;
+  aspect-ratio: 16 / 11;
+  overflow: clip;
+}
+.pca-embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
 
 *Interactive 3D PCA created by the author with Python. PCA computed using scikit-learn on a standardized allele-dosage matrix; visualization rendered with Plotly*
 
@@ -298,14 +316,32 @@ parameters such as theta/FST correction, mixed founders, and
 mutation models to more accurately reflect real demographic
 processes. The outcome is summarized in the following PCA:
 
-<div style="width:100%;max-width:700px;margin:1rem auto">
+<div class="pca-embed">
   <iframe
     src="/pca/pca3d_admixed.html"
     title="PCA 3D — Populations and Samples"
-    style="display:block;width:100%;height:580px;border:0;overflow:hidden"
-    loading="lazy" allowfullscreen scrolling="no">
-  </iframe>
+    loading="lazy"
+    allowfullscreen
+    scrolling="no"></iframe>
 </div>
+
+<style>
+.pca-embed{
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 1rem auto;
+  aspect-ratio: 16 / 11;
+  overflow: clip;
+}
+.pca-embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
 
 *Interactive 3D PCA created by the author with Python. PCA computed using scikit-learn on a standardized allele-dosage matrix; simulations were performed using Famlink2 and FORCE SNP database; visualization rendered with Plotly*
 
@@ -325,7 +361,7 @@ much more diverse and cannot be fully represented by a single model.
 
 ------------------------------------------------------------------------
 
-# 🧠 Concluding Remarks
+# 💡 Concluding Remarks
 
 The genetic history of *Homo sapiens* is the history of its **mutations,
 migrations, and admixtures**. Each inherited variation functions as a
