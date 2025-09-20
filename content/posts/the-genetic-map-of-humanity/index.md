@@ -331,7 +331,7 @@ processes. The outcome is summarized in the following PCA:
   width: 100%;
   max-width: 900px;
   margin: 1rem auto;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 16 / 12.5;
   overflow: clip;
 }
 .pca-embed iframe{
