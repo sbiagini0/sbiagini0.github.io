@@ -2,6 +2,7 @@
 title: "The Genetic Map of Humanity: Mutation, Migrations and Admixture"
 author: "sbiagini0"
 date: "2025-09-22"
+publishDate: "2025-09-20"
 tags: ["human evolution","population genetics","mtDNA","Y-Chromosome","SNPs","PCA","admixture"]
 categories: ["science"]
 output:
