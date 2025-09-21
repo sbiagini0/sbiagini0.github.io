@@ -1,3 +1,4 @@
+/* About config */
 /* Row-style badges that wrap on small screens */
 .badges{
   display:flex;
@@ -14,4 +15,32 @@
 }
 .badges a{
   line-height:0; /* remove extra whitespace for linked images */
+}
+
+/* Posts config */
+/* Base card styling with smooth transitions */
+.post-entry {
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease, background-color .18s ease;
+  will-change: transform, box-shadow, filter, background-color;
+}
+
+/* Hover effect: brighten, slightly lift up, and add shadow */
+.post-entry:hover {
+  filter: brightness(1.06);                   /* subtle illumination */
+  transform: translateY(-2px);                /* lift the card */
+  box-shadow: 0 8px 24px rgba(0,0,0,.10), 
+              0 2px 8px rgba(0,0,0,.06);      /* soft shadow */
+  background: var(--entry);                   /* keep theme background */
+  border-color: rgba(0,0,0,.06);              /* optional border color */
+}
+
+/* Make the corners more rounded */
+.post-entry,
+.post-entry:hover {
+  border-radius: 12px;
+}
+
+/* Change the title color on hover */
+.post-entry:hover .entry-header a {
+  color: var(--primary);                      /* use theme primary color */
 }
