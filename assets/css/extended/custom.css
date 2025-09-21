@@ -1,0 +1,17 @@
+/* Row-style badges that wrap on small screens */
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  align-items:center;
+  margin:.25rem 0 .75rem;
+}
+.badges img{
+  height:28px;
+  display:inline-block;
+  margin:0;
+  vertical-align:middle;
+}
+.badges a{
+  line-height:0; /* remove extra whitespace for linked images */
+}
