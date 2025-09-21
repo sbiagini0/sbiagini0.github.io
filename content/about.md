@@ -29,9 +29,8 @@ My work bridges biology and computation:
 
 ## 📂 Featured Repositories  
 
-- 🔬 [ParallelForensicLR](https://github.com/sbiagini0/ParallelForensicLR): Parallel likelihood ratio computations for forensic genetics.  
+- 🔬 [ParallelForensicLR](https://github.com/sbiagini0/ParallelForensicLR): Parallel likelihood ratio computations for forensic genetics. 
 - 🧩 [GeneMapper2Familias](https://github.com/sbiagini0/GeneMapper2Familias): STR to Familias automation pipeline.
-
 - ⏳ [PedigreeOverTime](https://github.com/sbiagini0/PedigreeOverTime): Chronological pedigree evolution with parallel simulations. 
 
 ---
@@ -48,12 +47,7 @@ My work bridges biology and computation:
 
 ### 📊 Data Science & Analysis  
 
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) &nbsp;&nbsp;&nbsp;
-![NumPy](https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white) &nbsp;&nbsp;&nbsp;
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) &nbsp;&nbsp;&nbsp;
-![tidyverse](https://img.shields.io/badge/tidyverse-1A162D?style=for-the-badge&logo=R&logoColor=white) &nbsp;&nbsp;&nbsp;
-![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white) &nbsp;&nbsp;&nbsp;
-![Plotly](https://img.shields.io/badge/plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white) &nbsp;&nbsp;&nbsp;
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) ![tidyverse](https://img.shields.io/badge/tidyverse-1A162D?style=for-the-badge&logo=R&logoColor=white) ![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white) ![Plotly](https://img.shields.io/badge/plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 
 ---
 
