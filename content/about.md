@@ -38,34 +38,43 @@ My work bridges biology and computation:
 ## ⚙️ Tech & Tools  
 
 ### 🖥️ Programming & Scripting  
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) &nbsp;&nbsp;&nbsp;
-![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)&nbsp;&nbsp;&nbsp;
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white) &nbsp;&nbsp;&nbsp;
-
----
-
-### 📊 Data Science & Analysis  
-
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) ![tidyverse](https://img.shields.io/badge/tidyverse-1A162D?style=for-the-badge&logo=R&logoColor=white) ![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white) ![Plotly](https://img.shields.io/badge/plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+<p class="badges">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R">
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash">
+</p>
 
 ---
 
-### 📂 Reproducibility & Collaboration  
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) &nbsp;&nbsp;&nbsp;
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) &nbsp;&nbsp;&nbsp;
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white) &nbsp;&nbsp;&nbsp;
-![RStudio](https://img.shields.io/badge/RStudio-75AADB?style=for-the-badge&logo=rstudio&logoColor=white) &nbsp;&nbsp;&nbsp;
-![RMarkdown](https://img.shields.io/badge/RMarkdown-2C3E50?style=for-the-badge&logo=r&logoColor=white) &nbsp;&nbsp;&nbsp;
+### 📊 Data Science & Analysis
+<p class="badges">
+  <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas">
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+  <img src="https://img.shields.io/badge/tidyverse-1A162D?style=for-the-badge&logo=R&logoColor=white" alt="tidyverse">
+  <img src="https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="ggplot2">
+  <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly">
+</p>
 
 ---
 
-### ☁️ Systems & Platforms  
+### 📂 Reproducibility & Collaboration
+<p class="badges">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter">
+  <img src="https://img.shields.io/badge/RStudio-75AADB?style=for-the-badge&logo=rstudio&logoColor=white" alt="RStudio">
+  <img src="https://img.shields.io/badge/RMarkdown-2C3E50?style=for-the-badge&logo=r&logoColor=white" alt="RMarkdown">
+</p>
 
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) &nbsp;&nbsp;&nbsp;
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) &nbsp;&nbsp;&nbsp;
-![WSL](https://img.shields.io/badge/WSL-0A97F5?style=for-the-badge&logo=ubuntu&logoColor=white) &nbsp;&nbsp;&nbsp;
+---
+
+### ☁️ Systems & Platforms
+<p class="badges">
+  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows">
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+  <img src="https://img.shields.io/badge/WSL-0A97F5?style=for-the-badge&logo=ubuntu&logoColor=white" alt="WSL">
+</p>
 
 ---
 
@@ -76,9 +85,16 @@ My work bridges biology and computation:
 ---
 
 ## 📫 Connect with Me  
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sebastian-biagini) &nbsp;&nbsp;&nbsp;
-[![GitHub Pages](https://img.shields.io/badge/Blog-181717?style=for-the-badge&logo=github&logoColor=white)](https://sbiagini0.github.io) &nbsp;&nbsp;&nbsp;
-[![Gmail](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:) &nbsp;&nbsp;&nbsp;
+<p class="badges">
+  <a href="https://www.linkedin.com/in/sebastian-biagini" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="https://sbiagini0.github.io" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Blog-181717?style=for-the-badge&logo=github&logoColor=white" alt="Blog">
+  </a>
+  <a href="mailto:@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+</p>
 
 ---
