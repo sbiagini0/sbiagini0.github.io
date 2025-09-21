@@ -1,4 +1,4 @@
-/* About config */
+/* --- About config --- */
 /* Row-style badges that wrap on small screens */
 .badges{
   display:flex;
@@ -6,105 +6,119 @@
   gap:.5rem;
   align-items:center;
   margin:.25rem 0 .75rem;
+  min-width:0;                 /* avoid pushing layout wider */
 }
 .badges img{
   height:28px;
   display:inline-block;
   margin:0;
   vertical-align:middle;
+  width:auto;                  /* prevent fixed width overflow */
 }
-.badges a{
-  line-height:0; /* remove extra whitespace for linked images */
-}
+.badges a{ line-height:0; }
 
-/* Posts config */
+/* --- Posts config --- */
 /* Base card styling with smooth transitions */
-.post-entry {
+.post-entry{
   transition: transform .18s ease, box-shadow .18s ease, filter .18s ease, background-color .18s ease;
   will-change: transform, box-shadow, filter, background-color;
+  border-radius:12px;
 }
 
 /* Hover: brighten, lift, shadow */
-.post-entry:hover {
-  filter: brightness(1.06);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,.10), 0 2px 8px rgba(0,0,0,.06);
-  background: var(--entry);
-  border-color: rgba(0,0,0,.06);
+.post-entry:hover{
+  filter:brightness(1.06);
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(0,0,0,.10), 0 2px 8px rgba(0,0,0,.06);
+  background:var(--entry);
+  border-color:rgba(0,0,0,.06);
 }
 
 /* Rounded corners */
 .post-entry,
-.post-entry:hover {
-  border-radius: 12px;
-}
+.post-entry:hover{ border-radius:12px; }
 
 /* Title color on hover */
-.post-entry:hover .entry-header a {
-  color: var(--primary);
-}
+.post-entry:hover .entry-header a{ color:var(--primary); }
 
-/* Main config */
 /* Thumbnail zoom on hover */
-.post-entry .entry-cover img {
-  transition: transform .25s ease;
-  transform-origin: center;
+.post-entry .entry-cover img{
+  transition:transform .25s ease;
+  transform-origin:center;
 }
-.post-entry:hover .entry-cover img {
-  transform: scale(1.04);
-}
+.post-entry:hover .entry-cover img{ transform:scale(1.04); }
 
 /* Keyboard focus outline (accessibility) */
-.post-entry:focus-within {
-  outline: 2px solid var(--primary);
-  outline-offset: 4px;
-  border-radius: 12px;
+.post-entry:focus-within{
+  outline:2px solid var(--primary);
+  outline-offset:4px;
+  border-radius:12px;
 }
-.post-entry .entry-header a { outline: none; } /* rely on parent outline */
+.post-entry .entry-header a{ outline:none; }
 
 /* Respect reduced-motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .post-entry, .post-entry * { transition: none !important; }
-  .post-entry:hover { transform: none; box-shadow: none; filter: none; }
+@media (prefers-reduced-motion: reduce){
+  .post-entry, .post-entry *{ transition:none !important; }
+  .post-entry:hover{ transform:none; box-shadow:none; filter:none; }
 }
 
-/* Tighter spacing on home (mobile) */
-@media (max-width: 640px){
-
-  /* main container padding on home */
-  .home .main {
-    padding-top: .5rem !important;
-    padding-bottom: .5rem !important;
+/* --- Tighter spacing on home (mobile) --- */
+@media (max-width:640px){
+  .home .main{ padding-top:.5rem !important; padding-bottom:.5rem !important; }
+  .home .first-entry, .home .home-info, .home .profile{
+    margin-top:.5rem !important; margin-bottom:.75rem !important;
   }
-
-  /* profile card block spacing */
-  .home .first-entry,
-  .home .home-info,
-  .home .profile {
-    margin-top: .5rem !important;
-    margin-bottom: .75rem !important;
-  }
-
-  /* circular profile image spacing */
-  .home .profile img {
-    margin-top: .25rem !important;
-    margin-bottom: .25rem !important;
-  }
-
-  /* title & subtitle spacing */
-  .home .profile h1,
-  .home .profile .profile-title {
-    margin: .2rem 0 .3rem !important;
-  }
-  .home .profile .profile-subtitle {
-    margin: 0 0 .6rem !important;
-    line-height: 1.25 !important;
-  }
-
-  /* reduce gaps above/below post entries list */
-  .home .post-entry {
-    margin-top: .5rem !important;
-    margin-bottom: .75rem !important;
-  }
+  .home .profile img{ margin-top:.25rem !important; margin-bottom:.25rem !important; }
+  .home .profile h1, .home .profile .profile-title{ margin:.2rem 0 .3rem !important; }
+  .home .profile .profile-subtitle{ margin:0 0 .6rem !important; line-height:1.25 !important; }
+  .home .post-entry{ margin-top:.5rem !important; margin-bottom:.75rem !important; }
 }
 
+/* --- Mobile overflow fixes (PaperMod) --- */
+
+/* 1) Prevent horizontal scrolling */
+html, body{ max-width:100%; overflow-x:hidden; }
+
+/* 2) Media elements never exceed container */
+img, svg, canvas, video, iframe{ max-width:100%; height:auto; display:block; }
+
+/* 3) Code blocks & tables scroll inside themselves */
+.post-content pre,
+.single .post-content pre,
+.highlight{ max-width:100%; overflow-x:auto; }
+.post-content table{ display:block; max-width:100%; overflow-x:auto; }
+
+/* 4) Long links/words don’t break layout */
+.post-content a,
+.post-content p,
+.post-content li{
+  word-break:break-word;
+  overflow-wrap:anywhere;
+}
+
+/* 5) Ensure home profile image can’t overflow */
+.home .profile img{ max-width:100%; height:auto; }
+
+/* 6) Extra safety: main container doesn’t allow horizontal overflow */
+.main{ overflow-x:hidden; }
+
+/* Keep external-link icon inline in the header menu */
+#menu li a {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;              /* space between text and icon */
+}
+
+#menu li a .external-link,
+#menu li a svg.external-link {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  margin: 0;
+  transform: none;         /* neutralize any translate that drops it */
+}
+
+#menu li a .external-link svg {
+  width: .9em;
+  height: .9em;
+}
