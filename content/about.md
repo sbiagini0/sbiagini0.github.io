@@ -29,9 +29,9 @@ My work bridges biology and computation:
 
 ## 📂 Featured Repositories  
 
-- 🔬 [ParallelForensicLR](https://github.com/sbiagini0/ParallelForensicLR): Parallel likelihood ratio computations for forensic genetics. 
-- 🧩 [GeneMapper2Familias](https://github.com/sbiagini0/GeneMapper2Familias): STR to Familias automation pipeline.
-- ⏳ [PedigreeOverTime](https://github.com/sbiagini0/PedigreeOverTime): Chronological pedigree evolution with parallel simulations. 
+- [ParallelForensicLR](https://github.com/sbiagini0/ParallelForensicLR): Parallel likelihood ratio computations for forensic genetics. 
+- [GeneMapper2Familias](https://github.com/sbiagini0/GeneMapper2Familias): STR to Familias automation pipeline.
+- [PedigreeOverTime](https://github.com/sbiagini0/PedigreeOverTime): Chronological pedigree evolution with parallel simulations. 
 
 ---
 
@@ -44,8 +44,6 @@ My work bridges biology and computation:
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash">
 </p>
 
----
-
 ### 📊 Data Science & Analysis
 <p class="badges">
   <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas">
@@ -56,8 +54,6 @@ My work bridges biology and computation:
   <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly">
 </p>
 
----
-
 ### 📂 Reproducibility & Collaboration
 <p class="badges">
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
@@ -66,8 +62,6 @@ My work bridges biology and computation:
   <img src="https://img.shields.io/badge/RStudio-75AADB?style=for-the-badge&logo=rstudio&logoColor=white" alt="RStudio">
   <img src="https://img.shields.io/badge/RMarkdown-2C3E50?style=for-the-badge&logo=r&logoColor=white" alt="RMarkdown">
 </p>
-
----
 
 ### ☁️ Systems & Platforms
 <p class="badges">
