@@ -240,12 +240,13 @@ eastward expansions.
 </div>
 
 <style>
+/* Desktop */
 .pca-embed{
   position: relative;
   width: 100%;
   max-width: 900px;
   margin: 1rem auto;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 16 / 12.5;
   overflow: clip;
 }
 .pca-embed iframe{
@@ -254,6 +255,14 @@ eastward expansions.
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Cellphone */
+@media (max-width: 640px){
+  .pca-embed{
+    aspect-ratio: 4 / 3.4;  /* más alto en phone */
+    min-height: 560px;      /* asegura que entren canvas + leyenda */
+  }
 }
 </style>
 
@@ -326,6 +335,7 @@ processes. The outcome is summarized in the following PCA:
 </div>
 
 <style>
+/* Desktop */
 .pca-embed{
   position: relative;
   width: 100%;
@@ -340,6 +350,14 @@ processes. The outcome is summarized in the following PCA:
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Cellphone */
+@media (max-width: 640px){
+  .pca-embed{
+    aspect-ratio: 4 / 3.4;  /* más alto en phone */
+    min-height: 560px;      /* asegura que entren canvas + leyenda */
+  }
 }
 </style>
 
