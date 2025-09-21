@@ -1,16 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sebastián Biagini</title><link>https://sbiagini0.github.io/</link><description>Recent content on Sebastián Biagini</description><generator>Hugo -- 0.149.0</generator><language>en-us</language><lastBuildDate>Mon, 22 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sbiagini0.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://sbiagini0.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/about/</guid><description>&lt;h1 id="-hi-im-sebastián-biagini"&gt;👋 Hi, I’m Sebastián Biagini&lt;/h1&gt;
-&lt;h2 id="professional-overview"&gt;Professional Overview&lt;/h2&gt;
-&lt;p&gt;🔬 Bachelor&amp;rsquo;s degree in Biology Science.&lt;/p&gt;
-&lt;p&gt;🧬 Bioinformatician working in Forensic Genetics.&lt;/p&gt;
-&lt;p&gt;🎓 Aspiring Data Scientist.&lt;/p&gt;
-&lt;h2 id="skills--technologies"&gt;Skills &amp;amp; Technologies&lt;/h2&gt;
-&lt;p&gt;👩‍💻 Programming Languages: &lt;img alt="R" loading="lazy" src="https://img.shields.io/badge/-R-276DC3?logo=R&amp;logoColor=white"&gt; &amp;amp; &lt;img alt="Python" loading="lazy" src="https://img.shields.io/badge/-Python-3776AB?logo=python&amp;logoColor=white"&gt;&lt;/p&gt;
-&lt;p&gt;📊 Data Analysis: STR/SNP analysis, pedigree analysis, forensic genetic profiling, data visualization, statistical analysis.&lt;/p&gt;
-&lt;p&gt;📋 Version Control: &lt;img alt="Git" loading="lazy" src="https://img.shields.io/badge/-Git-F05032?logo=git&amp;logoColor=white"&gt; &amp;amp; &lt;img alt="GitHub" loading="lazy" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white"&gt;&lt;/p&gt;
-&lt;h3 id="contact-info"&gt;Contact Info&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sebastián Biagini</title><link>https://sbiagini0.github.io/</link><description>Recent content on Sebastián Biagini</description><generator>Hugo -- 0.149.0</generator><language>en-us</language><lastBuildDate>Mon, 22 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sbiagini0.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://sbiagini0.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/about/</guid><description>&lt;h1 id="-hi-im-sebastián"&gt;👋 Hi, I’m Sebastián&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="-about-me"&gt;👨‍🔬 About Me&lt;/h2&gt;
+&lt;p&gt;I’m a &lt;strong&gt;Biologist&lt;/strong&gt; working mainly in &lt;strong&gt;Forensic Genetics&lt;/strong&gt; and &lt;strong&gt;Data Science&lt;/strong&gt;.&lt;br&gt;
+My work bridges biology and computation:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;💼 LinkedIn: &lt;a href="https://www.linkedin.com/in/sebastian-biagini/"&gt;Sebastián Biagini&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>The Genetic Map of Humanity: Mutation, Migrations and Admixture</title><link>https://sbiagini0.github.io/posts/the-genetic-map-of-humanity/</link><pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/posts/the-genetic-map-of-humanity/</guid><description>&lt;h1 id="-the-timescale-of-mutations"&gt;⏳🧬 The Timescale of Mutations&lt;/h1&gt;
+&lt;li&gt;STR/SNP analysis for kinship &amp;amp; missing person identification (MPI/DVI)&lt;/li&gt;
+&lt;li&gt;Pedigree reconstruction and genetic profiling&lt;/li&gt;
+&lt;li&gt;Building pipelines for large-scale genetic datasets&lt;/li&gt;
+&lt;li&gt;Applying &lt;strong&gt;Data Science &amp;amp; Machine Learning&lt;/strong&gt; to forensic contexts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-education"&gt;🎓 Education&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Certificate&lt;/strong&gt; – Data Science: Applications in Biology and Medicine with Python and R - Universidad de Barcelona&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;B.Sc&lt;/strong&gt; – Biological Sciences - Universidad de Buenos Aires&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-featured-repositories"&gt;📂 Featured Repositories&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;🔬 &lt;a href="https://github.com/sbiagini0/ParallelForensicLR"&gt;ParallelForensicLR&lt;/a&gt;: Parallel likelihood ratio computations for forensic genetics.&lt;/p&gt;</description></item><item><title>The Genetic Map of Humanity: Mutation, Migrations and Admixture</title><link>https://sbiagini0.github.io/posts/the-genetic-map-of-humanity/</link><pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/posts/the-genetic-map-of-humanity/</guid><description>&lt;h1 id="-the-timescale-of-mutations"&gt;⏳🧬 The Timescale of Mutations&lt;/h1&gt;
 &lt;p&gt;Mutations are changes in the DNA sequence that occur due to errors in
 replication or the action of environmental factors. They can be single
 base substitutions, insertions or deletions of fragments, or larger
