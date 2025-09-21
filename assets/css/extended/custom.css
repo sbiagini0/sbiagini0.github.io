@@ -1,124 +1,368 @@
-/* --- About config --- */
-/* Row-style badges that wrap on small screens */
-.badges{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.5rem;
-  align-items:center;
-  margin:.25rem 0 .75rem;
-  min-width:0;                 /* avoid pushing layout wider */
-}
-.badges img{
-  height:28px;
-  display:inline-block;
-  margin:0;
-  vertical-align:middle;
-  width:auto;                  /* prevent fixed width overflow */
-}
-.badges a{ line-height:0; }
+/* ================================
+   1) Global resets & layout hygiene
+   ================================ */
 
-/* --- Posts config --- */
-/* Base card styling with smooth transitions */
-.post-entry{
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease, background-color .18s ease;
-  will-change: transform, box-shadow, filter, background-color;
-  border-radius:12px;
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;            /* kill horizontal scrollbar */
+  overflow-y: auto !important;   /* vertical only if needed */
 }
 
-/* Hover: brighten, lift, shadow */
-.post-entry:hover{
-  filter:brightness(1.06);
-  transform:translateY(-2px);
-  box-shadow:0 8px 24px rgba(0,0,0,.10), 0 2px 8px rgba(0,0,0,.06);
-  background:var(--entry);
-  border-color:rgba(0,0,0,.06);
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* Rounded corners */
-.post-entry,
-.post-entry:hover{ border-radius:12px; }
-
-/* Title color on hover */
-.post-entry:hover .entry-header a{ color:var(--primary); }
-
-/* Thumbnail zoom on hover */
-.post-entry .entry-cover img{
-  transition:transform .25s ease;
-  transform-origin:center;
-}
-.post-entry:hover .entry-cover img{ transform:scale(1.04); }
-
-/* Keyboard focus outline (accessibility) */
-.post-entry:focus-within{
-  outline:2px solid var(--primary);
-  outline-offset:4px;
-  border-radius:12px;
-}
-.post-entry .entry-header a{ outline:none; }
-
-/* Respect reduced-motion preference */
-@media (prefers-reduced-motion: reduce){
-  .post-entry, .post-entry *{ transition:none !important; }
-  .post-entry:hover{ transform:none; box-shadow:none; filter:none; }
+img, svg, canvas, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* --- Tighter spacing on home (mobile) --- */
-@media (max-width:640px){
-  .home .main{ padding-top:.5rem !important; padding-bottom:.5rem !important; }
-  .home .first-entry, .home .home-info, .home .profile{
-    margin-top:.5rem !important; margin-bottom:.75rem !important;
+:root { scrollbar-gutter: stable both-edges; }
+
+
+/* ================================
+   2) Hero / Profile blocks (PaperMod)
+   ================================ */
+
+.home-info,
+.profile,
+.first-entry,
+[class*="hero"],
+[class*="Hero"],
+[class*="Home"] {
+  margin-top: clamp(0rem, 1.5vw, 1.25rem);
+  margin-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+  min-height: auto !important;
+  height: auto !important;
+}
+
+.home-info + .post-list,
+.profile + .post-list,
+.first-entry + .post-list {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .home-info,
+  .profile,
+  .first-entry {
+    padding-top: 0.5rem;
+    padding-bottom: 0.25rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    min-height: auto !important;
+    height: auto !important;
   }
-  .home .profile img{ margin-top:.25rem !important; margin-bottom:.25rem !important; }
-  .home .profile h1, .home .profile .profile-title{ margin:.2rem 0 .3rem !important; }
-  .home .profile .profile-subtitle{ margin:0 0 .6rem !important; line-height:1.25 !important; }
-  .home .post-entry{ margin-top:.5rem !important; margin-bottom:.75rem !important; }
+  .home-info, .profile, .first-entry { min-height: 100dvh; }
+  .home-info h2, .profile h2, .first-entry h2 {
+    margin-bottom: 0.35rem;
+    line-height: 1.25;
+  }
+  .home-info, .profile { gap: 0.5rem; }
 }
 
-/* --- Mobile overflow fixes (PaperMod) --- */
 
-/* 1) Prevent horizontal scrolling */
-html, body{ max-width:100%; overflow-x:hidden; }
+/* ================================
+   3) Badges row (About section)
+   ================================ */
 
-/* 2) Media elements never exceed container */
-img, svg, canvas, video, iframe{ max-width:100%; height:auto; display:block; }
-
-/* 3) Code blocks & tables scroll inside themselves */
-.post-content pre,
-.single .post-content pre,
-.highlight{ max-width:100%; overflow-x:auto; }
-.post-content table{ display:block; max-width:100%; overflow-x:auto; }
-
-/* 4) Long links/words don’t break layout */
-.post-content a,
-.post-content p,
-.post-content li{
-  word-break:break-word;
-  overflow-wrap:anywhere;
-}
-
-/* 5) Ensure home profile image can’t overflow */
-.home .profile img{ max-width:100%; height:auto; }
-
-/* 6) Extra safety: main container doesn’t allow horizontal overflow */
-.main{ overflow-x:hidden; }
-
-/* Keep external-link icon inline in the header menu */
-#menu li a {
-  display: inline-flex;
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
   align-items: center;
-  gap: .3rem;              /* space between text and icon */
+  margin: .25rem 0 .75rem;
 }
 
-#menu li a .external-link,
-#menu li a svg.external-link {
+.badges img {
+  height: 28px;
   display: inline-block;
-  line-height: 1;
-  vertical-align: middle;
   margin: 0;
-  transform: none;         /* neutralize any translate that drops it */
+  vertical-align: middle;
 }
 
-#menu li a .external-link svg {
-  width: .9em;
-  height: .9em;
+.badges a { line-height: 0; }
+
+@media (max-width: 420px) {
+  .badges { gap: .4rem; }
+  .badges img { height: 24px; }
+}
+
+/* GitHub arrow fix */
+.badges a svg,
+a[href*="github.com"] svg {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+
+/* ================================
+   4) Post cards hover effect
+   ================================ */
+
+.post-entry {
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    filter .18s ease,
+    background-color .18s ease;
+  will-change: transform, box-shadow, filter, background-color;
+}
+
+.post-entry:hover {
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.08),
+    0 2px 4px rgba(0,0,0,.06);
+}
+
+@media (hover: none) {
+  .post-entry:hover {
+    transform: none;
+    box-shadow: none;
+    filter: none;
+  }
+}
+
+
+/* ================================
+   5) Containers that can overflow
+   ================================ */
+
+.main, .page, .content, .post-content {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+.post-content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-content pre,
+.post-content code {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+.post-content iframe,
+.post-content .iframe-container {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+
+/* ================================
+   6) Headings spacing
+   ================================ */
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  scroll-margin-top: 80px;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .post-content h1,
+  .post-content h2,
+  .post-content h3 { margin-top: .9rem; }
+}
+
+
+/* ================================
+   7) Avatars & subtitles
+   ================================ */
+
+.profile .avatar,
+.home-info .avatar,
+.first-entry .avatar {
+  margin: 0;
+  line-height: 0;
+}
+
+.profile .subtitle,
+.home-info .subtitle,
+.first-entry .subtitle {
+  margin: .35rem 0 .25rem;
+}
+
+@media (max-width: 600px) {
+  .profile .avatar img,
+  .home-info .avatar img,
+  .first-entry .avatar img {
+    width: clamp(72px, 24vw, 112px) !important;
+    height: auto !important;
+  }
+  .profile .avatar,
+  .home-info .avatar,
+  .first-entry .avatar {
+    padding: 0 !important;
+    margin: 0 0 .35rem 0 !important;
+  }
+}
+
+
+/* ================================
+   8) Anti-whitespace (hero & next block)
+   ================================ */
+
+@media (max-width: 600px) {
+  .home-info,
+  .profile,
+  .first-entry {
+    display: flow-root !important;
+    padding-bottom: 0.01px !important;
+    margin-bottom: 0 !important;
+  }
+  .home-info > :last-child,
+  .profile > :last-child,
+  .first-entry > :last-child { margin-bottom: 0 !important; }
+  .home-info + .post-list,
+  .home-info + .posts,
+  .profile + .post-list,
+  .profile + .posts,
+  .first-entry + .post-list,
+  .first-entry + .posts {
+    margin-top: 0 !important;
+    padding-top: 0.25rem !important;
+  }
+  .home-info + .post-list::before,
+  .home-info + .posts::before,
+  .profile + .post-list::before,
+  .profile + .posts::before,
+  .first-entry + .post-list::before,
+  .first-entry + .posts::before {
+    content: none !important;
+    display: none !important;
+  }
+  .main, .page, .content, .post-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+
+/* ================================
+   9) Footer & bottom white space
+   ================================ */
+
+.home .page,
+.home .main,
+.home .content,
+.home .post-content {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.home .main > :last-child,
+.home .content > :last-child,
+.home .post-content > :last-child {
+  margin-bottom: 0 !important;
+}
+
+footer.footer,
+.footer {
+  margin-top: .25rem !important;   /* small gap above footer */
+  margin-bottom: 0 !important;
+  padding-top: .25rem !important;
+  padding-bottom: .25rem !important;
+  line-height: 1.2;                /* compact text inside */
+  font-size: 0.85rem;              /* a bit smaller */
+}
+
+@media (max-width: 600px) {
+  footer.footer,
+  .footer {
+    margin-top: .2rem !important;
+    padding-top: .2rem !important;
+    padding-bottom: .2rem !important;
+  }
+}
+
+.home .main::after,
+.home .content::after,
+.home .post-content::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ================================
+   Sticky footer + kill tiny bottom gap
+   --------------------------------
+   Forces the footer to sit at the viewport bottom on short pages
+   and removes the 1–2px overflow that triggers a scrollbar.
+   ================================ */
+
+/* 1) Make the page a column flex layout that fills the viewport */
+html, body { height: 100%; }
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Ensure no accidental scroll from subpixel shadows */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* 2) Let the main content expand, footer sticks to bottom */
+.main, main, .page, .content {
+  flex: 1 0 auto;     /* take remaining height */
+  min-height: 0;      /* prevent overflow from flex children */
+}
+
+/* 3) Footer never adds extra space and stays at the bottom */
+footer.footer, .footer {
+  flex-shrink: 0;
+  margin: 0 !important;
+  padding: .25rem 0 !important;
+  line-height: 1.2;
+  border: 0 !important;          /* avoid 1px border pushing height */
+}
+
+/* 4) Remove any bottom margins that can create a white band inside the card */
+.main > :last-child,
+.page > :last-child,
+.content > :last-child,
+.post-content > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* 5) PaperMod containers sometimes add bottom padding on home: zero it */
+.home .main,
+.home .page,
+.home .content,
+.home .post-content {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 6) Micro overflow guard on small screens (cuts imperceptible 1–2px tails) */
+@media (max-width: 600px) {
+  body { overflow-y: clip; }   /* hide fractional overflow that causes the bar */
+}
+
+/* 7) If any wrapper forces min-height:100vh, neutralize it to avoid extra space */
+[class*="wrapper"],
+[class*="container"] {
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* 8) If the theme inserts a pseudo separator after main, kill it */
+.main::after,
+.content::after,
+.page::after {
+  content: none !important;
+  display: none !important;
 }
