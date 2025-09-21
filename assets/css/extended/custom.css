@@ -71,31 +71,40 @@
 /* Tighter spacing on home (mobile) */
 @media (max-width: 640px){
 
-  /* Main container top/bottom padding on home */
-  .home .main { padding-top: .5rem; padding-bottom: .5rem; }
-
-  /* Profile/card block spacing */
-  .home .first-entry, .home .home-info, .home .profile {
-    margin-top: .5rem;
-    margin-bottom: .75rem;
+  /* main container padding on home */
+  .home .main {
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
   }
 
-  /* Profile image (circular) spacing */
-  .profile img {
-    margin-top: .25rem;
-    margin-bottom: .25rem;
+  /* profile card block spacing */
+  .home .first-entry,
+  .home .home-info,
+  .home .profile {
+    margin-top: .5rem !important;
+    margin-bottom: .75rem !important;
   }
 
-  /* Title & subtitle spacing */
-  .profile h1,
-  .profile .profile-title { 
-    margin: .2rem 0 .3rem;
-  }
-  .profile .profile-subtitle {
-    margin: 0 0 .6rem;
-    line-height: 1.25;
+  /* circular profile image spacing */
+  .home .profile img {
+    margin-top: .25rem !important;
+    margin-bottom: .25rem !important;
   }
 
-  /* Reduce extra gaps above/below entries list */
-  .post-entry { margin-top: .5rem; margin-bottom: .75rem; }
+  /* title & subtitle spacing */
+  .home .profile h1,
+  .home .profile .profile-title {
+    margin: .2rem 0 .3rem !important;
+  }
+  .home .profile .profile-subtitle {
+    margin: 0 0 .6rem !important;
+    line-height: 1.25 !important;
+  }
+
+  /* reduce gaps above/below post entries list */
+  .home .post-entry {
+    margin-top: .5rem !important;
+    margin-bottom: .75rem !important;
+  }
 }
+
