@@ -67,3 +67,35 @@
   .post-entry, .post-entry * { transition: none !important; }
   .post-entry:hover { transform: none; box-shadow: none; filter: none; }
 }
+
+/* Tighter spacing on home (mobile) */
+@media (max-width: 640px){
+
+  /* Main container top/bottom padding on home */
+  .home .main { padding-top: .5rem; padding-bottom: .5rem; }
+
+  /* Profile/card block spacing */
+  .home .first-entry, .home .home-info, .home .profile {
+    margin-top: .5rem;
+    margin-bottom: .75rem;
+  }
+
+  /* Profile image (circular) spacing */
+  .profile img {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+  }
+
+  /* Title & subtitle spacing */
+  .profile h1,
+  .profile .profile-title { 
+    margin: .2rem 0 .3rem;
+  }
+  .profile .profile-subtitle {
+    margin: 0 0 .6rem;
+    line-height: 1.25;
+  }
+
+  /* Reduce extra gaps above/below entries list */
+  .post-entry { margin-top: .5rem; margin-bottom: .75rem; }
+}
