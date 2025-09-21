@@ -15,11 +15,15 @@ params:
   ShowCodeCopyButtons: true
   social: true
 
-  homeInfoParams:
-    Content: 
-      A blog about biology, human genetics, and forensic insights powered by data science.
-    Title: ""
-    Photo: ""
+  profileMode:
+    enabled: true
+    title: " "
+    subtitle: "A blog about biology, human genetics, and forensic insights powered by data science."
+    imageUrl: "/posts/banner/banner.png"
+    imageTitle: "banner"
+    imageWidth: "450" 
+    imageHeight: "300"
+    buttons: []
 
   socialIcons:
     - name: email
@@ -31,12 +35,18 @@ params:
 
 menu:
   main:
+    - name: Home
+      pageRef: /
+      weight: 1
     - name: Posts
       pageRef: /posts/
       weight: 2
     - name: Search
       url: /search/
-      weight: 2
+      weight: 3
+    - name: About
+      pageRef: /about/
+      weight: 4
     - identifier: GitHub
       name: GitHub
       url: "https://github.com/sbiagini0"
@@ -46,5 +56,4 @@ outputs:
   home:
     - HTML
     - RSS
-    - JSON # necessary for search
-
+    - JSON
