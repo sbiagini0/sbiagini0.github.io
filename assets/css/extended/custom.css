@@ -24,23 +24,46 @@
   will-change: transform, box-shadow, filter, background-color;
 }
 
-/* Hover effect: brighten, slightly lift up, and add shadow */
+/* Hover: brighten, lift, shadow */
 .post-entry:hover {
-  filter: brightness(1.06);                   /* subtle illumination */
-  transform: translateY(-2px);                /* lift the card */
-  box-shadow: 0 8px 24px rgba(0,0,0,.10), 
-              0 2px 8px rgba(0,0,0,.06);      /* soft shadow */
-  background: var(--entry);                   /* keep theme background */
-  border-color: rgba(0,0,0,.06);              /* optional border color */
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.10), 0 2px 8px rgba(0,0,0,.06);
+  background: var(--entry);
+  border-color: rgba(0,0,0,.06);
 }
 
-/* Make the corners more rounded */
+/* Rounded corners */
 .post-entry,
 .post-entry:hover {
   border-radius: 12px;
 }
 
-/* Change the title color on hover */
+/* Title color on hover */
 .post-entry:hover .entry-header a {
-  color: var(--primary);                      /* use theme primary color */
+  color: var(--primary);
+}
+
+/* Main config */
+/* Thumbnail zoom on hover */
+.post-entry .entry-cover img {
+  transition: transform .25s ease;
+  transform-origin: center;
+}
+.post-entry:hover .entry-cover img {
+  transform: scale(1.04);
+}
+
+/* Keyboard focus outline (accessibility) */
+.post-entry:focus-within {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+.post-entry .entry-header a { outline: none; } /* rely on parent outline */
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .post-entry, .post-entry * { transition: none !important; }
+  .post-entry:hover { transform: none; box-shadow: none; filter: none; }
 }
