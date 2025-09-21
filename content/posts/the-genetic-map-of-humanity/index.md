@@ -260,8 +260,8 @@ eastward expansions.
 /* Cellphone */
 @media (max-width: 640px){
   .pca-embed{
-    aspect-ratio: 4 / 3.4;  /* más alto en phone */
-    min-height: 560px;      /* asegura que entren canvas + leyenda */
+    aspect-ratio: 4 / 3.4;
+    min-height: 560px;
   }
 }
 </style>
@@ -355,8 +355,8 @@ processes. The outcome is summarized in the following PCA:
 /* Cellphone */
 @media (max-width: 640px){
   .pca-embed{
-    aspect-ratio: 4 / 3.4;  /* más alto en phone */
-    min-height: 560px;      /* asegura que entren canvas + leyenda */
+    aspect-ratio: 4 / 3.4;
+    min-height: 560px;
   }
 }
 </style>
