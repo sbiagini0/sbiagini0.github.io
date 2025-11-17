@@ -108,7 +108,7 @@ Although STRs are powerful for close relationships, their discriminative ability
 
 ---
 
-## 🔍 From STR to SNP: Increasing Resolution
+## 🔍 How SNPs Enhance the Statistical Power of Kinship Inference
 
 SNP-based panels address many of the intrinsic limitations of STR markers.  
 While STRs are informative but limited in number, **Single Nucleotide Polymorphisms (SNPs)** are extremely abundant, allowing the construction of panels with **thousands of loci distributed across the genome**.
