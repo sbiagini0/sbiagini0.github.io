@@ -49,7 +49,7 @@ The figure below illustrates the two competing hypotheses that underlie the LR:
   The POI is assumed to occupy the *missing person’s position* in the pedigree.  
   The green square is both POI and MP, and the LR numerator is the probability of observing the relatives’ genotypes **if the POI truly belongs in that family**.
 
-- **$H_2$: POI unrelated**  
+- **$H_2$: POI is unrelated**  
   The MP still belongs in the pedigree, but the POI is now placed **outside the family**, as an unrelated individual from the reference population.  
   The denominator of the LR is the probability of the same genetic data **if the POI is just a random, unrelated person**.
   
@@ -70,9 +70,7 @@ To help interpret the diagrams, note that forensic pedigrees follow standard gen
 
 ## 🎲 STR Kinship Simulations and Statistical Power
 
-To understand how well traditional STR panels perform in kinship inference, we can simulate thousands of conditioned profiles and calculate $\log_{10}(LR)$
-
- values under both hypotheses:
+To understand how well traditional STR markers perform in kinship inference, we can simulate thousands of conditioned profiles and calculate $\log_{10}(LR)$ under both hypotheses:
 
 - **Related (H1)** - the POI truly belongs in the family.
 - **Unrelated (H2)** - the POI is a random individual from the population.
@@ -106,7 +104,7 @@ This overlap creates regions where:
 
 These regions are highlighted in the interactive plot. They represent outcomes where the statistical evidence would point in the wrong direction - a critical limitation when dealing with missing-person cases or distant relatives.
 
-Although STRs are powerful for close relationships, their discriminative ability declines sharply as biological distance increases, motivating the transition toward high-density SNP panels.
+Although STRs are powerful for close relationships, their discriminative ability declines significantly as biological distance increases, motivating the transition toward high-density SNP panels.
 
 ---
 
@@ -120,10 +118,7 @@ This means that **nearby markers are not assumed to be independent**, and the LR
 This is particularly important when working with dense panels where many SNPs fall within the same haplotype block.
 
 The **FORCE panel**, for example, contains **3,915 autosomal SNPs** designed to maximize kinship resolution up to the **5th degree of relationship**.  
-Because SNPs capture segment sharing and recombination signals with high granularity, they markedly improve **discriminatory power**, even for distant or weak biological relationships.
-
-In the following sections, we analyze SNP performance in **duo-based kinship comparisons** between an individual of interest (e.g., a Missing Person) and relatives spanning the **first to fifth degree**.  
-For each degree, we simulate the expected $\log_{10}(Linked LR)$ distributions under both *Related* and *Unrelated* hypotheses.
+Because SNPs capture segment sharing and recombination patterns with high resolution, they markedly improve **discriminatory power**, even for distant or weak biological relationships.
 
 ---
 
@@ -132,7 +127,7 @@ For each degree, we simulate the expected $\log_{10}(Linked LR)$ distributions u
 To demonstrate the practical impact of SNPs on kinship resolution, we simulated **duo comparisons** between a Missing Person (MP) and one relative at a time, separately for **five degrees of biological relatedness**.  
 For every scenario, we computed the $\log_{10}(Linked LR)$ distributions assuming both **Related** and **Unrelated** hypotheses, using a likelihood framework that explicitly models **marker linkage**-a crucial requirement when working with highly dense SNP panels such as **FORCE (3915 SNPs)**.
 
-Each degree of relationship is represented by a specific pedigree diagram, followed by the corresponding LR density curves, illustrating how the separation between hypotheses evolves as the amount of shared DNA decreases.
+Each degree of relationship is represented by a specific pedigree plot, followed by the corresponding LR density curves, illustrating how the separation between hypotheses evolves as the amount of shared DNA decreases.
 
 ---
 
@@ -155,7 +150,7 @@ Each degree of relationship is represented by a specific pedigree diagram, follo
 
 
 At first degree, SNPs provide **extremely strong** discrimination.  
-The *Related* distribution lies entirely on the positive side of the LR axis (with very high values), while the *Unrelated* distribution collapses near $\log_{10}(LR)$ = -308, producing **absolute separation**.  
+The *Related* distribution lies entirely on the positive side of the LR axis (with very high values), while the *Unrelated* distribution collapses near $\log_{10}(LR) = -308$, producing **absolute separation**.  
 False positives or false negatives are essentially nonexistent.
 
 ---
@@ -180,7 +175,7 @@ False positives or false negatives are essentially nonexistent.
 
 Second-degree comparisons still show **excellent separation**.  
 The *Related* curve remains clearly to the right of the threshold, with high LR values, whereas the *Unrelated* distribution remains tightly concentrated near strongly negative values.  
-Even with duo testing (only two individuals), the distance between the two distributions continues to be large.
+Even with duo testing, the distance between the two distributions continues to be large.
 
 ---
 
@@ -228,9 +223,9 @@ Dense SNP panels still perform extremely well at this level.
 
 At fourth degree, we begin to see **overlap** between the tails of the two distributions.  
 The *Related* curve moves closer to the zero threshold, and its lower tail overlaps slightly with the upper tail of the *Unrelated* distribution.  
-This marks the point where duo-only comparisons begin to lose perfect discriminatory power.
+This marks the point where duo-only comparisons begin to lose significant discriminatory power.
 
-However, **if additional relatives were included**, even one related of the MP or the reference individual, the likelihood would accumulate more genetic data, shifting the *Related* curve rightward and restoring a clean separation.
+However, **if additional relatives were included** -even a single extra related of the MP-, the likelihood would accumulate more genetic data, moving the *Related* curve rightward and restoring a clean separation.
 
 ---
 
@@ -253,24 +248,23 @@ However, **if additional relatives were included**, even one related of the MP o
 *Interactive LR curves generated from duo kinship simulations using the FORCE 3,915 markers SNP panel . Linked LR computed with Merlin and visualization rendered with Plotly in R.*
 
 Fifth-degree relationships show **notable overlap** between distributions in a duo scenario.  
-This is expected: the proportion of shared DNA becomes small, and the variance in IBD sharing increases at distant relationships.  
-Despite this, the *Related* curve still tends toward LR values **above zero**, evidencing genuine kinship signal.
+The proportion of shared DNA becomes small, and the variance in IBD sharing increases at distant relationships.  
+Despite this, the *Related* curve still tends toward LR values **above zero**, reflecting real genetic relatedness.
 
-But again: **including additional relatives** would add more inheritance constraints and almost certainly separate the curves enough to achieve a strong inclusionary conclusion.  
-SNP-based likelihoods scale very efficiently with additional pedigree information.
+But again, **including additional relatives** would add more inheritance constraints and almost certainly separate the curves enough to support a strong conclusion of relatedness.  
 
 ---
 
 **Interpretation note:**  
-> In SNP-based likelihood ratio distributions, the *Unrelated* curve is typically much narrower, taller, and shifted toward strongly negative log<sub>10</sub>(Linked LR) values. This reflects the high probability that unrelated individuals share very little identical-by-descent (IBD) material.  
+> In SNP-based likelihood ratio distributions, the *Unrelated* curve is typically much narrower, taller, and shifted toward strongly negative $log10(Linked LR)$ values. This reflects the high probability that unrelated individuals share very little identical-by-descent (IBD) material.  
 > 
-> In contrast, the *Related* curve is wider and more flattened. This broader dispersion arises from natural variability in shared genomic segments due to recombination and inheritance processes. As a result, related individuals span a wider range of log₁₀(LR) values.
+> In contrast, the *Related* curve is wider and more flattened. This broader dispersion arises from natural variability in shared genomic segments due to recombination and inheritance processes. As a result, related individuals span a wider range of $log10(Linked LR)$ values.
 
 ---
 
 ## 💡 Concluding Remarks  
 
-SNP-based kinship inference provides a **major leap in resolution** compared to STRs, largely due to the availability of thousands of markers and the ability to model **linkage between nearby loci**.
+SNP-based kinship inference provides a **significant enhancement in resolution** compared to STRs, largely due to the availability of thousands of markers and the ability to model **linkage between nearby loci**.
 
 - For **close and intermediate relatives (1st–3rd degree)**, SNP panels yield **highly decisive LR values**, even when only two individuals are available.  
 - For **more distant relatives (4th–5th degree)**, some overlap emerges in duo comparisons, but the Related distribution still tends to remain distinguishable from the Unrelated one.  
