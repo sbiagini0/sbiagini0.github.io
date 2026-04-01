@@ -1,9 +1,10 @@
 {{- define "main" }}
 
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
-{{- partial "index_profile.html" . }}
-
-<hr class="section-divider">
+<div class="hero-section">
+    {{- partial "index_profile.html" . }}
+    <hr class="section-divider">
+</div>
 
 {{- /* NEW: Reverted Home List with Per-Post Carousels */}}
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}

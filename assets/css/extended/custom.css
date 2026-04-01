@@ -154,17 +154,27 @@ body::before {
 }
 
 /* ==========================================================================
-   4) Home Profile Section
+   4) Home Hero Section (Full Viewport)
    ========================================================================== */
-.main .profile {
-  min-height: calc(100vh - 60px) !important; /* EXACT height minus header */
-  padding: 2rem 0;
+.hero-section {
+  width: 100%;
+  height: calc(100vh - 60px); /* Fill exact remaining screen */
   display: flex !important;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centers all content vertically in the screen */
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  justify-content: center; /* Center everything in the middle */
+  position: relative !important; /* Context for the anchor bar */
+  overflow: hidden;
+}
+
+.main .profile {
+  min-height: auto !important;
+  padding: 0;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem; /* Buffer above the anchor bar */
 }
 
 .profile h1 {
@@ -242,20 +252,23 @@ body::before {
   border: 0;
   height: 1px;
   background: radial-gradient(circle, var(--border) 0%, transparent 85%);
-  width: 100vw !important; /* Spans full screen width */
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-  margin-top: 0; /* Anchors it precisely to the 100vh block end */
-  margin-bottom: 3.5rem;
+  width: 100vw !important;
+  position: absolute !important; /* Anchor bar logic */
+  bottom: 0 !important;         /* Fixed at the very bottom */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
   opacity: 0.8;
 }
 
 /* ==========================================================================
    5) Post List (Home/List Page)
    ========================================================================== */
+.hero-section + .post-entry, 
+.post-entry:first-of-type {
+  margin-top: 5rem !important; /* Large airy gap after the anchor bar */
+}
+
 .post-entry {
   background: var(--bg-card);
   backdrop-filter: blur(12px);
