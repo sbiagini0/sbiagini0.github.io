@@ -158,7 +158,8 @@ body::before {
    ========================================================================== */
 .hero-section {
   width: 100%;
-  height: calc(100vh - 60px); /* Fill exact remaining screen */
+  height: calc(100svh - 60px); /* Use svh for smart mobile viewport calculation */
+  min-height: calc(100svh - 60px);
   display: flex !important;
   flex-direction: column;
   align-items: center;
@@ -412,3 +413,32 @@ body::before {
   border: 3px solid var(--bg-main);
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+
+/* ==========================================================================
+   10) Responsive Mobile Refinements
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .profile h1 {
+    font-size: 2.2rem !important; /* Scale down for mobile */
+    margin-bottom: 0.8rem;
+  }
+  
+  .profile .subtitle {
+    font-size: 1.1rem !important;
+    padding: 0 1rem;
+    line-height: 1.4;
+  }
+  
+  .social-icons {
+    gap: 1.2rem !important;
+    margin-top: 0.8rem !important;
+  }
+  
+  .hero-section {
+    padding: 1rem 0;
+  }
+
+  .section-divider {
+    opacity: 0.6; /* Slightly subtler on small screens */
+  }
+}
