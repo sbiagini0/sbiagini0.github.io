@@ -175,7 +175,7 @@ body::before {
 .profile .subtitle {
   font-size: 1.5rem; /* Increased 1pt for better presence */
   max-width: 600px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.2rem; /* Reduced from 2rem */
   color: var(--text-dim);
   text-align: center;
   line-height: 1.5;
@@ -187,7 +187,7 @@ body::before {
   justify-content: center !important;
   align-items: center !important;
   gap: 1.8rem;
-  margin-top: 2rem !important;
+  margin-top: 1rem !important; /* Reduced from 2rem */
   min-height: 40px !important;
   visibility: visible; /* Removed !important to allow GSAP control */
 }
@@ -238,10 +238,17 @@ body::before {
 
 .section-divider {
   border: 0;
-  height: 2px;
-  background: radial-gradient(circle, var(--border) 0%, transparent 90%);
-  margin: 2.5rem auto;
-  max-width: 65%;
+  height: 1px;
+  background: radial-gradient(circle, var(--border) 0%, transparent 85%);
+  width: 100vw !important; /* Spans full screen width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
 }
 
 /* ==========================================================================
