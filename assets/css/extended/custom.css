@@ -1,6 +1,10 @@
 /* ==========================================================================
    1) Design System & Tokens
    ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --bg-main: #ffffff;
   --bg-card: rgba(255, 255, 255, 0.7);
@@ -51,7 +55,8 @@ body {
   background: var(--bg-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 body::before {
@@ -71,8 +76,9 @@ body::before {
 
 .main {
   width: 100%;
+  flex: 1; /* This will push the footer to the bottom */
   display: flow-root;
-  margin-top: 60px; /* Mandatory space for fixed header */
+  padding-top: 60px; /* Using padding instead of margin to prevent overflow */
   padding-bottom: 2rem;
 }
 
@@ -357,7 +363,7 @@ body::before {
   align-items: center;
   flex-wrap: wrap; 
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: auto; /* Magnetically push to bottom without adding extra pixels */
   font-size: 0.85rem;
   width: 100% !important;
   max-width: none !important;
