@@ -89,7 +89,7 @@ body::before {
   height: 3px;
   width: 0%;
   background: linear-gradient(90deg, var(--accent), #7c3aed);
-  z-index: 9999;
+  z-index: 10001 !important; /* Higher than header's 9999 */
   transition: width 0.1s ease-out;
 }
 
@@ -157,13 +157,14 @@ body::before {
    4) Home Profile Section
    ========================================================================== */
 .main .profile {
-  min-height: auto !important;
-  padding-top: 2rem; /* Reduced since .main handles the header gap now */
-  padding-bottom: 2rem;
+  min-height: calc(100vh - 60px) !important; /* EXACT height minus header */
+  padding: 2rem 0;
   display: flex !important;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Centers all content vertically in the screen */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .profile h1 {
@@ -187,7 +188,8 @@ body::before {
   justify-content: center !important;
   align-items: center !important;
   gap: 1.8rem;
-  margin-top: 1rem !important; /* Reduced from 2rem */
+  margin-top: 1rem !important; 
+  margin-bottom: 0.5rem !important; /* Newly tightened */
   min-height: 40px !important;
   visibility: visible; /* Removed !important to allow GSAP control */
 }
@@ -246,8 +248,8 @@ body::before {
   right: 50%;
   margin-left: -50vw !important;
   margin-right: -50vw !important;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 0; /* Anchors it precisely to the 100vh block end */
+  margin-bottom: 3.5rem;
   opacity: 0.8;
 }
 
