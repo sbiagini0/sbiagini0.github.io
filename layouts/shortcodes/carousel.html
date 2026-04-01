@@ -1,0 +1,15 @@
+{{- $images := split (.Get "images") "," -}}
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    {{- range $images }}
+    <div class="swiper-slide">
+      <img src="{{ . | relURL }}" alt="Carousel Image" loading="lazy">
+    </div>
+    {{- end }}
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Navigation -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>

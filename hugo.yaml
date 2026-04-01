@@ -9,11 +9,15 @@ markup:
       unsafe: true
 
 params:
+  author: 'Sebastián Biagini'
   defaultTheme: auto
   math: true
   ShowReadingTime: true
   ShowCodeCopyButtons: true
   social: true
+  cover:
+    hidden: true
+    hiddenInSingle: true
 
   profileMode:
     enabled: true
@@ -25,7 +29,14 @@ params:
     imageHeight: "300"
     buttons: []
 
-  socialIcons:
+  socialIcons: # Theme-standard naming
+    - name: email
+      url: "mailto:"
+    - name: github
+      url: "https://github.com/sbiagini0"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/sebastian-biagini/"
+  SocialIcons: # Legacy/Backup naming
     - name: email
       url: "mailto:"
     - name: github

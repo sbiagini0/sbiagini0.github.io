@@ -1,0 +1,94 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Initial Hero Animations
+    const heroTimeline = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.2 } });
+    
+    const profile = document.querySelector('.profile');
+    if (profile) {
+      heroTimeline
+        .fromTo('.profile .avatar', 
+          { scale: 0.5, opacity: 0, rotate: -5 },
+          { scale: 1, opacity: 1, rotate: 0, duration: 1.5, ease: "elastic.out(1, 0.75)" }
+        )
+        .fromTo('.profile h1', 
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8 }, 
+          "-=1"
+        )
+        .fromTo('.profile .subtitle', 
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8 }, 
+          "-=0.6"
+        )
+        .fromTo('.social-icons a', 
+          { scale: 0, opacity: 0 },
+          { scale: 1, opacity: 1, stagger: 0.1, duration: 0.6, ease: "back.out(1.7)" }, 
+          "-=0.4"
+        );
+
+      // Subtle float animation
+      gsap.to('.profile .avatar img', {
+        y: 8,
+        duration: 3,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+        delay: 2
+      });
+    }
+
+    // 2. Reading Progress Bar 
+    const progressBar = document.querySelector('.reading-progress-bar');
+    if (progressBar) {
+      window.addEventListener('scroll', () => {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (window.scrollY / totalHeight) * 100;
+        progressBar.style.width = `${progress}%`;
+      });
+    }
+
+    // 3. ScrollReveal for Post Cards
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      
+      const postEntries = document.querySelectorAll('.post-entry');
+      postEntries.forEach((entry, index) => {
+        gsap.from(entry, {
+          scrollTrigger: {
+            trigger: entry,
+            start: "top 92%",
+            toggleActions: "play none none none"
+          },
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: (index % 2) * 0.1
+        });
+
+        const swiperImg = entry.querySelector('.post-item-swiper img');
+        if (swiperImg) {
+          entry.addEventListener('mouseenter', () => {
+            gsap.to(swiperImg, { scale: 1.05, duration: 0.6, ease: "power2.out" });
+          });
+          entry.addEventListener('mouseleave', () => {
+            gsap.to(swiperImg, { scale: 1, duration: 0.6, ease: "power2.out" });
+          });
+        }
+      });
+    }
+
+    // 4. Header interaction
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (header) {
+        if (window.scrollY > 40) {
+          header.classList.add('header-scrolled');
+          header.style.background = "rgba(var(--bg-main), 0.8)";
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+      }
+    });
+  });
+</script>
