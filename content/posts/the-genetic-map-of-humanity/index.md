@@ -15,6 +15,11 @@ output:
     mathjax: null
 ShowToc: true
 TocOpen: true
+cover:
+  image: "images/mutation.png"
+  alt: "DNA Mutation Visualization"
+  caption: "The timescale of genetic variation"
+  relative: true
 ---
 
 # ⏳🧬 The Timescale of Mutations

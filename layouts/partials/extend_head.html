@@ -1,5 +1,37 @@
 {{- $css := resources.Get "css/extended/custom.css" | minify | fingerprint -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+<!-- Swiper.js Carousel Library -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- GSAP Animation Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- Smart Theme Switcher (Time-based + Preference) -->
+<script>
+    (function() {
+        const prefTheme = localStorage.getItem("pref-theme");
+        const hour = new Date().getHours();
+        const isNight = hour < 7 || hour >= 19;
+
+        if (prefTheme === "dark" || (!prefTheme && isNight)) {
+            document.documentElement.classList.add('dark');
+            // Small observer to ensure it propagates to body instantly
+            const observer = new MutationObserver(() => {
+                if (document.body) {
+                    document.body.classList.add('dark');
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document.documentElement, { childList: true });
+        }
+    })();
+</script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>

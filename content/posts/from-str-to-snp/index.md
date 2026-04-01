@@ -8,6 +8,11 @@ categories: ["science"]
 ShowToc: true
 TocOpen: true
 math: true
+cover:
+  image: "images/MP_hypothesis.png"
+  alt: "MPI Hypothesis Pedigree"
+  caption: "From STRs to modern SNP identification"
+  relative: true
 ---
 
 ## 🧬 Introduction

@@ -7,9 +7,15 @@ TocOpen: true
 draft: false
 tags: ["Forensic Genetics", "Bioinformatics", "R", "Kinship Analysis", "DVI", "MPI", "STR", "Likelihood Ratio"]
 description: "KinshipAssembly is an open-source Shiny application that automates all-vs-all STR-based kinship comparisons between MPI/DVI families and POI Component pedigrees"
+cover:
+  image: "images/1.banner.png"
+  alt: "KinshipAssembly Banner"
+  caption: "Forensic Kinship Analysis Workflow"
+  relative: true
 ---
 
 ## 🧬 Introduction
+
 
 In humanitarian and forensic genetics, one of the most computationally tedious problems
 is also one of the most consequential: systematically comparing a set of reference family
