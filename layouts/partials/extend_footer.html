@@ -84,11 +84,31 @@
       if (header) {
         if (window.scrollY > 40) {
           header.classList.add('header-scrolled');
-          header.style.background = "rgba(var(--bg-main), 0.8)";
         } else {
           header.classList.remove('header-scrolled');
         }
       }
     });
+
+    // 5. Individual Post Carousels
+    if (typeof Swiper !== 'undefined') {
+      const itemSwipers = document.querySelectorAll('.post-item-swiper');
+      itemSwipers.forEach((swiperEl, index) => {
+        new Swiper(swiperEl, {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          loop: true,
+          observer: true,       // CRITICAL: Watch for visibility changes
+          observeParents: true, // Watch for parent container changes
+          effect: 'fade',
+          fadeEffect: { crossFade: true },
+          autoplay: {
+            delay: 3500 + (index * 400),
+            disableOnInteraction: false,
+          },
+          speed: 1200,
+        });
+      });
+    }
   });
 </script>
