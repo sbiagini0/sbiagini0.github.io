@@ -49,19 +49,22 @@ menu:
     - name: Home
       pageRef: /
       weight: 1
+    - name: Apps
+      pageRef: /apps/
+      weight: 2
     - name: Posts
       pageRef: /posts/
-      weight: 2
+      weight: 3
     - name: Search
       url: /search/
-      weight: 3
+      weight: 4
     - name: About
       pageRef: /about/
-      weight: 4
+      weight: 5
     - identifier: GitHub
       name: GitHub
       url: "https://github.com/sbiagini0"
-      weight: 5
+      weight: 6
 
 outputs:
   home:
