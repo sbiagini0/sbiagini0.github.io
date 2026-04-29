@@ -44,6 +44,10 @@ params:
     - name: linkedin
       url: "https://www.linkedin.com/in/sebastian-biagini/"
 
+  # Display names for /apps listing (folder slug -> label)
+  appDisplayNames:
+    kinship-assembly: KinshipAssembly
+
 menu:
   main:
     - name: Home
