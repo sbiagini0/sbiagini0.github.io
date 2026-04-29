@@ -47,35 +47,46 @@
       });
     }
 
-    // 3. ScrollReveal for Post Cards
+    // 3. ScrollReveal (same motion as Posts): lists, Apps cards, About/post singles, Search chrome
+    // Home hero (.profile) stays on its own timeline above.
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
-      
-      const postEntries = document.querySelectorAll('.post-entry');
-      postEntries.forEach((entry, index) => {
-        gsap.from(entry, {
-          scrollTrigger: {
-            trigger: entry,
-            start: "top 92%",
-            toggleActions: "play none none none"
-          },
-          y: 40,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power2.out",
-          delay: (index % 2) * 0.1
-        });
 
+      const revealFromBelow = (elements, staggerDuplex = true) => {
+        elements.forEach((el, index) => {
+          gsap.from(el, {
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 92%',
+              toggleActions: 'play none none none'
+            },
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power2.out',
+            delay: staggerDuplex ? (index % 2) * 0.1 : 0
+          });
+        });
+      };
+
+      const listCards = document.querySelectorAll('.post-entry, .first-entry, .apps-card');
+      revealFromBelow(listCards, true);
+
+      listCards.forEach((entry) => {
         const swiperImg = entry.querySelector('.post-item-swiper img');
         if (swiperImg) {
           entry.addEventListener('mouseenter', () => {
-            gsap.to(swiperImg, { scale: 1.05, duration: 0.6, ease: "power2.out" });
+            gsap.to(swiperImg, { scale: 1.05, duration: 0.6, ease: 'power2.out' });
           });
           entry.addEventListener('mouseleave', () => {
-            gsap.to(swiperImg, { scale: 1, duration: 0.6, ease: "power2.out" });
+            gsap.to(swiperImg, { scale: 1, duration: 0.6, ease: 'power2.out' });
           });
         }
       });
+
+      revealFromBelow(document.querySelectorAll('article.post-single'), false);
+      revealFromBelow(document.querySelectorAll('.main > header.page-header'), false);
+      revealFromBelow(document.querySelectorAll('.main .searchbox'), false);
     }
 
     // 4. Header interaction
