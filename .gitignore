@@ -1,27 +1,36 @@
-# Compiled Object files, Static and Dynamic libs (Shared Objects)
-*.o
-*.a
+# R
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*.Rproj
+.Rproj.user/
 
-# Folders
-_obj
-_test
+# renv (if used)
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/sandbox/
+renv/staging/
 
-# Architecture specific extensions/prefixes
-*.[568vq]
-[568vq].out
+# Shiny / deployment
+rsconnect/
+*.dcf
 
-*.cgo1.go
-*.cgo2.c
-_cgo_defun.c
-_cgo_gotypes.go
-_cgo_export.*
-
-_testmain.go
-
-*.exe
-*.test
-
-/public
+# OS / editor
 .DS_Store
-.hugo_build.lock
-resources/_gen/
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Secrets (never commit)
+.Renviron
+.env
+.env.*
+
+# Optional: uncomment if validation data must stay private
+# validacion/
