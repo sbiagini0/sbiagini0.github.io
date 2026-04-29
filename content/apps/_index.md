@@ -1,6 +1,4 @@
 ---
 title: "Apps"
-description: "Aplicaciones disponibles"
+description: "Interactive tools hosted on this site."
 ---
-
-Esta pagina lista automaticamente las apps publicadas en `/static/apps`.

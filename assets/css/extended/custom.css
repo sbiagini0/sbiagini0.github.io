@@ -6,6 +6,7 @@
 }
 
 :root {
+  --header-height: 68px;
   --bg-main: #ffffff;
   --bg-card: rgba(255, 255, 255, 0.7);
   --text-main: #1d1d1f;
@@ -78,7 +79,7 @@ body::before {
   width: 100%;
   flex: 1; /* This will push the footer to the bottom */
   display: flow-root;
-  padding-top: 60px; /* Using padding instead of margin to prevent overflow */
+  padding-top: var(--header-height); /* Using padding instead of margin to prevent overflow */
   padding-bottom: 2rem;
 }
 
@@ -117,10 +118,12 @@ body::before {
   flex-direction: row !important;
   align-items: center !important;
   justify-content: space-between !important;
-  max-width: var(--container-width);
+  /* Wider than content column so Home … GitHub fits without horizontal scroll */
+  max-width: min(900px, calc(100vw - 24px));
   margin: 0 auto;
-  padding: 0 0.5rem;
-  height: 60px;
+  padding: 0 0.75rem;
+  min-height: var(--header-height);
+  height: auto;
   flex-wrap: nowrap !important; /* Total block of wrapping */
 }
 
@@ -146,11 +149,13 @@ body::before {
   margin: 0 !important;
   padding: 0 !important;
   list-style: none !important;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 #menu a {
-  font-size: 13.5px !important;
-  margin-left: 0.7rem !important;
+  font-size: 13px !important;
+  margin-left: 0.55rem !important;
 }
 
 /* ==========================================================================
@@ -158,8 +163,8 @@ body::before {
    ========================================================================== */
 .hero-section {
   width: 100%;
-  height: calc(100svh - 60px); /* Use svh for smart mobile viewport calculation */
-  min-height: calc(100svh - 60px);
+  height: calc(100svh - var(--header-height)); /* Use svh for smart mobile viewport calculation */
+  min-height: calc(100svh - var(--header-height));
   display: flex !important;
   flex-direction: column;
   align-items: center;
@@ -318,6 +323,70 @@ body::before {
 .entry-content {
   color: var(--text-dim);
   font-size: 1rem;
+}
+
+/* ==========================================================================
+   5b) Apps listing (/apps/)
+   ========================================================================== */
+.apps-page {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 0.5rem 3rem;
+}
+
+.apps-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.apps-grid li {
+  margin: 0;
+}
+
+.apps-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none !important;
+  color: var(--text-main) !important;
+  transition: transform 0.35s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.apps-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.apps-card-title {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.apps-card-action {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.apps-empty {
+  color: var(--text-dim);
+  font-size: 0.95rem;
 }
 
 /* ==========================================================================

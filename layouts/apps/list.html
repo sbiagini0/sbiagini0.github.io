@@ -3,49 +3,48 @@
   {{- partial "breadcrumbs.html" . }}
   <h1>{{ .Title }}</h1>
   {{- if .Description }}
-  <div class="post-description">
-    {{ .Description }}
-  </div>
+  <div class="post-description">{{ .Description }}</div>
   {{- end }}
 </header>
 
-{{- if .Content }}
-<div class="post-content">
-  {{ .Content }}
-</div>
-{{- end }}
-
 {{- $appsDir := "static/apps" }}
+{{- $labels := site.Params.appDisplayNames | default dict }}
 {{- if fileExists $appsDir }}
-{{- $entries := readDir $appsDir }}
-{{- $hasApps := false }}
-<div class="post-content">
-  <ul>
+  {{- $entries := readDir $appsDir }}
+  {{- $hasApps := false }}
+<div class="apps-page">
+  <ul class="apps-grid">
     {{- range $entries }}
     {{- if .IsDir }}
-    {{- $hasApps = true }}
-    {{- $name := .Name }}
-    {{- $basePath := printf "/apps/%s/" $name }}
-    {{- $link := $basePath }}
-    {{- if fileExists (printf "static/apps/%s/edit/index.html" $name) }}
-      {{- $link = printf "/apps/%s/edit/" $name }}
-    {{- else if fileExists (printf "static/apps/%s/shinylive/index.html" $name) }}
-      {{- $link = printf "/apps/%s/shinylive/" $name }}
-    {{- else if fileExists (printf "static/apps/%s/index.html" $name) }}
-      {{- $link = $basePath }}
-    {{- end }}
-    <li><a href="{{ $link }}">{{ $name | humanize }}</a></li>
+      {{- $slug := .Name }}
+      {{- $href := "" }}
+      {{- if fileExists (printf "static/apps/%s/index.html" $slug) }}
+        {{- $href = printf "/apps/%s/index.html" $slug }}
+      {{- else if fileExists (printf "static/apps/%s/edit/index.html" $slug) }}
+        {{- $href = printf "/apps/%s/edit/index.html" $slug }}
+      {{- else if fileExists (printf "static/apps/%s/shinylive/index.html" $slug) }}
+        {{- $href = printf "/apps/%s/shinylive/index.html" $slug }}
+      {{- end }}
+      {{- if $href }}
+        {{- $hasApps = true }}
+        {{- $title := default ($slug | humanize) (index $labels $slug) }}
+    <li>
+      <a class="apps-card" href="{{ $href | relURL }}">
+        <span class="apps-card-title">{{ $title }}</span>
+        <span class="apps-card-action">Open<span aria-hidden="true"> →</span></span>
+      </a>
+    </li>
+      {{- end }}
     {{- end }}
     {{- end }}
   </ul>
-
   {{- if not $hasApps }}
-  <p>No se encontraron apps en <code>/static/apps</code>.</p>
+  <p class="apps-empty">No apps found under <code>/static/apps</code>.</p>
   {{- end }}
 </div>
 {{- else }}
-<div class="post-content">
-  <p>No existe la carpeta <code>/static/apps</code>.</p>
+<div class="apps-page">
+  <p class="apps-empty">Missing folder <code>/static/apps</code>.</p>
 </div>
 {{- end }}
 {{- end }}
