@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sebastián Biagini</title><link>http://localhost:1314/es/</link><description>Recent content on Sebastián Biagini</description><generator>Hugo -- 0.161.0</generator><language>es-ES</language><lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1314/es/index.xml" rel="self" type="application/rss+xml"/><item><title>KinshipAssembly: comparación genética para flujos MPI/DVI</title><link>http://localhost:1314/es/posts/kinshipassembly/</link><pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate><guid>http://localhost:1314/es/posts/kinshipassembly/</guid><description>KinshipAssembly es una aplicación Shiny de código abierto que automatiza comparaciones de parentesco STR todas contra todas entre familias MPI/DVI y pedigríes de componentes POI</description></item><item><title>De STR a paneles SNP: técnicas modernas en la identificación genética de personas desaparecidas</title><link>http://localhost:1314/es/posts/from-str-to-snp/</link><pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate><guid>http://localhost:1314/es/posts/from-str-to-snp/</guid><description>&lt;h2 id="-introduction"&gt;🧬 Introduction&lt;/h2&gt;
+&lt;p&gt;In forensic genetics, &lt;strong&gt;Short Tandem Repeats (STRs)&lt;/strong&gt; have been the key of human identification for over two decades.&lt;br&gt;
+Current forensic systems typically use &lt;strong&gt;24 autosomal STR markers&lt;/strong&gt;, forming the global standard for paternity testing, missing person identification (MPI) and disaster victim identification (DVI).&lt;/p&gt;
+&lt;p&gt;However, the field is now &lt;strong&gt;gradually migrating toward high-density Single Nucleotide Polymorphism (SNP) technologies&lt;/strong&gt;.&lt;br&gt;
+This transition is motivated by the need for &lt;strong&gt;greater statistical resolution&lt;/strong&gt;, improved ability to detect &lt;strong&gt;distant kinship&lt;/strong&gt;, and compatibility with &lt;strong&gt;degraded DNA samples&lt;/strong&gt; often recovered in humanitarian and forensic contexts.&lt;/p&gt;</description></item><item><title>El mapa genético de la humanidad: mutación, migraciones y mestizaje</title><link>http://localhost:1314/es/posts/the-genetic-map-of-humanity/</link><pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate><guid>http://localhost:1314/es/posts/the-genetic-map-of-humanity/</guid><description>&lt;h1 id="-the-timescale-of-mutations"&gt;⏳🧬 The Timescale of Mutations&lt;/h1&gt;
+&lt;p&gt;Mutations are changes in the DNA sequence that occur due to errors in
+replication or the action of environmental factors. They can be single
+base substitutions, insertions or deletions of fragments, or larger
+rearrangements. Most are neutral and do not directly affect the
+organism, but they are transmitted to offspring and accumulate over
+time. These mutations are the &lt;strong&gt;primary source of genetic variability&lt;/strong&gt;,
+and their effects are complemented by other fundamental processes in
+population genetics:&lt;/p&gt;</description></item><item><title>Acerca de</title><link>http://localhost:1314/es/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1314/es/about/</guid><description>&lt;h2 id="sobre-mí"&gt;Sobre mí&lt;/h2&gt;
+&lt;p&gt;Biólogo enfocado en &lt;strong&gt;genética forense&lt;/strong&gt;, &lt;strong&gt;análisis de parentesco&lt;/strong&gt; y &lt;strong&gt;flujos computacionales&lt;/strong&gt; para investigación reproducible.&lt;/p&gt;
+&lt;h2 id="proyectos-destacados"&gt;Proyectos destacados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/sbiagini0/ParallelForensicLR"&gt;ParallelForensicLR&lt;/a&gt;&lt;br&gt;
+Cálculo paralelo de ratios de verosimilitud para flujos de genética forense.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/sbiagini0/GeneMapper2Familias"&gt;GeneMapper2Familias&lt;/a&gt;&lt;br&gt;
+Pipeline de automatización para transformar salidas de GeneMapper en entradas listas para Familias.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/sbiagini0/PedigreeOverTime"&gt;PedigreeOverTime&lt;/a&gt;&lt;br&gt;
+Marco de simulación para evolución cronológica de pedigríes y análisis de escenarios.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="formación"&gt;Formación&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Maestría en Explotación de Datos y Descubrimiento del Conocimiento&lt;/strong&gt;, FCEN &amp;amp; FI, Universidad de Buenos Aires. 2026–presente&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ciencia de datos: aplicaciones en biología y medicina con Python y R&lt;/strong&gt;, Universidad de Barcelona. 2024&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Licenciatura en Ciencias Biológicas&lt;/strong&gt;, FCEN, Universidad de Buenos Aires. 2012–2018&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="stack-técnico"&gt;Stack técnico&lt;/h2&gt;
+&lt;p class="badges"&gt;
+&lt;img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python"&gt;
+&lt;img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="R"&gt;
+&lt;img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&amp;logo=gnubash&amp;logoColor=white" alt="Bash"&gt;
+&lt;img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white" alt="pandas"&gt;
+&lt;img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&amp;logo=numpy&amp;logoColor=white" alt="NumPy"&gt;
+&lt;img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&amp;logo=scikit-learn&amp;logoColor=white" alt="scikit-learn"&gt;
+&lt;img src="https://img.shields.io/badge/tidyverse-1A162D?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="tidyverse"&gt;
+&lt;img src="https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="ggplot2"&gt;
+&lt;img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&amp;logo=plotly&amp;logoColor=white" alt="Plotly"&gt;
+&lt;img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git"&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"&gt;
+&lt;img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&amp;logo=jupyter&amp;logoColor=white" alt="Jupyter"&gt;
+&lt;img src="https://img.shields.io/badge/RStudio-75AADB?style=for-the-badge&amp;logo=rstudio&amp;logoColor=white" alt="RStudio"&gt;
+&lt;img src="https://img.shields.io/badge/RMarkdown-2C3E50?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="RMarkdown"&gt;
+&lt;img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&amp;logo=windows&amp;logoColor=white" alt="Windows"&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&amp;logo=linux&amp;logoColor=black" alt="Linux"&gt;
+&lt;img src="https://img.shields.io/badge/WSL-0A97F5?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="WSL"&gt;
+&lt;/p&gt;</description></item></channel></rss>

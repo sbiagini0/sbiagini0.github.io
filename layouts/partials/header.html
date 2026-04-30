@@ -96,28 +96,6 @@
                     </svg>
                 </button>
                 {{- end }}
-
-                {{- $lang := .Lang}}
-                {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
-                {{- with site.Home.Translations }}
-                <ul class="lang-switch">
-                    {{- if $separator }}<li>|</li>{{ end }}
-                    {{- range . -}}
-                    {{- if ne $lang .Lang }}
-                    <li>
-                        <a href="{{- .Permalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
-                            aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
-                            {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
-                            {{- .Language.LanguageName | emojify -}}
-                            {{- else }}
-                            {{- .Lang | title -}}
-                            {{- end -}}
-                        </a>
-                    </li>
-                    {{- end -}}
-                    {{- end}}
-                </ul>
-                {{- end }}
             </div>
         </div>
         {{- $currentPage := . }}
@@ -144,6 +122,33 @@
                     {{- end }}
                 </a>
             </li>
+            {{- end }}
+            {{- range hugo.Sites }}
+            {{- if ne $currentPage.Language.Lang .Language.Lang }}
+            {{- $wantLang := .Language.Lang }}
+            {{- $label := .Language.Label | default .Language.Lang }}
+            {{- $siteOther := . }}
+            {{- $langAria := printf "%s — %s" $label (i18n "lang_switch_aria") }}
+            {{- with index (where $currentPage.Translations "Lang" $wantLang) 0 }}
+            <li class="menu-lang-item">
+                <a href="{{ .Permalink }}" title="{{ $label }}" class="lang-switch-menu" aria-label="{{ $langAria }}">
+                    <span class="lang-switch-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </span>
+                    <span class="lang-switch-label">{{ $label }}</span>
+                </a>
+            </li>
+            {{- else }}
+            <li class="menu-lang-item">
+                <a href="{{ $siteOther.Home.Permalink }}" title="{{ $label }}" class="lang-switch-menu" aria-label="{{ $langAria }}">
+                    <span class="lang-switch-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </span>
+                    <span class="lang-switch-label">{{ $label }}</span>
+                </a>
+            </li>
+            {{- end }}
+            {{- end }}
             {{- end }}
         </ul>
     </nav>

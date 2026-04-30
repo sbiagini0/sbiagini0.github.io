@@ -1,0 +1,4 @@
+apps_open: Open
+apps_empty_none: 'No apps found under `/static/apps`.'
+apps_empty_missing: 'Missing folder `/static/apps`.'
+lang_switch_aria: Switch site language

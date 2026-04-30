@@ -31,7 +31,7 @@
     <li>
       <a class="apps-card" href="{{ $href | relURL }}">
         <span class="apps-card-title">{{ $title }}</span>
-        <span class="apps-card-action">Open<span aria-hidden="true"> →</span></span>
+        <span class="apps-card-action">{{ i18n "apps_open" }}<span aria-hidden="true"> →</span></span>
       </a>
     </li>
       {{- end }}
@@ -39,12 +39,12 @@
     {{- end }}
   </ul>
   {{- if not $hasApps }}
-  <p class="apps-empty">No apps found under <code>/static/apps</code>.</p>
+  <p class="apps-empty">{{ i18n "apps_empty_none" }}</p>
   {{- end }}
 </div>
 {{- else }}
 <div class="apps-page">
-  <p class="apps-empty">Missing folder <code>/static/apps</code>.</p>
+  <p class="apps-empty">{{ i18n "apps_empty_missing" }}</p>
 </div>
 {{- end }}
 {{- end }}

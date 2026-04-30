@@ -1,40 +1,43 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initial Hero Animations
-    const heroTimeline = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.2 } });
-    
-    const profile = document.querySelector('.profile');
-    if (profile) {
-      heroTimeline
-        .fromTo('.profile .avatar', 
-          { scale: 0.5, opacity: 0, rotate: -5 },
-          { scale: 1, opacity: 1, rotate: 0, duration: 1.5, ease: "elastic.out(1, 0.75)" }
-        )
-        .fromTo('.profile h1', 
-          { y: 30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8 }, 
-          "-=1"
-        )
-        .fromTo('.profile .subtitle', 
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8 }, 
-          "-=0.6"
-        )
-        .fromTo('.social-icons a', 
-          { scale: 0, opacity: 0 },
-          { scale: 1, opacity: 1, stagger: 0.1, duration: 0.6, ease: "back.out(1.7)" }, 
-          "-=0.4"
-        );
+    const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      // Subtle float animation
-      gsap.to('.profile .avatar img', {
-        y: 8,
-        duration: 3,
-        ease: "sine.inOut",
-        repeat: -1,
-        yoyo: true,
-        delay: 2
-      });
+    // 1. Initial Hero Animations (omit heavy motion if user prefers reduced motion)
+    if (motionOk && typeof gsap !== 'undefined') {
+      const heroTimeline = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.2 } });
+
+      const profile = document.querySelector('.profile');
+      if (profile) {
+        heroTimeline
+          .fromTo('.profile .avatar',
+            { scale: 0.5, opacity: 0, rotate: -5 },
+            { scale: 1, opacity: 1, rotate: 0, duration: 1.5, ease: "elastic.out(1, 0.75)" }
+          )
+          .fromTo('.profile h1',
+            { y: 30, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.8 },
+            "-=1"
+          )
+          .fromTo('.profile .subtitle',
+            { y: 20, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.8 },
+            "-=0.6"
+          )
+          .fromTo('.social-icons a',
+            { scale: 0, opacity: 0 },
+            { scale: 1, opacity: 1, stagger: 0.1, duration: 0.6, ease: "back.out(1.7)" },
+            "-=0.4"
+          );
+
+        gsap.to('.profile .avatar img', {
+          y: 8,
+          duration: 3,
+          ease: "sine.inOut",
+          repeat: -1,
+          yoyo: true,
+          delay: 2
+        });
+      }
     }
 
     // 2. Reading Progress Bar 
@@ -47,9 +50,8 @@
       });
     }
 
-    // 3. ScrollReveal (same motion as Posts): lists, Apps cards, About/post singles, Search chrome
-    // Home hero (.profile) stays on its own timeline above.
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    // 3. ScrollReveal: lists, Apps cards, articles (skipped when prefers-reduced-motion)
+    if (motionOk && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
 
       const revealFromBelow = (elements, staggerDuplex = true) => {
@@ -113,11 +115,11 @@
           observeParents: true, // Watch for parent container changes
           effect: 'fade',
           fadeEffect: { crossFade: true },
-          autoplay: {
+          autoplay: motionOk ? {
             delay: 3500 + (index * 400),
             disableOnInteraction: false,
-          },
-          speed: 1200,
+          } : false,
+          speed: motionOk ? 1200 : 320,
         });
       });
     }
