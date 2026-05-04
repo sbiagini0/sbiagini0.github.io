@@ -1,35 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sebastián Biagini</title><link>https://sbiagini0.github.io/</link><description>Recent content on Sebastián Biagini</description><generator>Hugo -- 0.149.0</generator><language>en-us</language><lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://sbiagini0.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://sbiagini0.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/about/</guid><description>&lt;h1 id="-hi-im-sebastián"&gt;👋 Hi, I’m Sebastián&lt;/h1&gt;
-&lt;hr&gt;
-&lt;h2 id="-about-me"&gt;👨‍🔬 About Me&lt;/h2&gt;
-&lt;p&gt;I’m a &lt;strong&gt;Biologist&lt;/strong&gt; working mainly in &lt;strong&gt;Forensic Genetics&lt;/strong&gt; and &lt;strong&gt;Data Science&lt;/strong&gt;.&lt;br&gt;
-My work bridges biology and computation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;STR/SNP analysis for kinship &amp;amp; missing person identification (MPI/DVI)&lt;/li&gt;
-&lt;li&gt;Pedigree reconstruction and genetic profiling&lt;/li&gt;
-&lt;li&gt;Building pipelines for large-scale genetic datasets&lt;/li&gt;
-&lt;li&gt;Applying &lt;strong&gt;Data Science &amp;amp; Machine Learning&lt;/strong&gt; to forensic contexts&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="-education"&gt;🎓 Education&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Certificate&lt;/strong&gt; – Data Science: Applications in Biology and Medicine with Python and R - Universidad de Barcelona&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;B.Sc&lt;/strong&gt; – Biological Sciences - Universidad de Buenos Aires&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="-featured-repositories"&gt;📂 Featured Repositories&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/sbiagini0/ParallelForensicLR"&gt;ParallelForensicLR&lt;/a&gt;: Parallel likelihood ratio computations for forensic genetics.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/sbiagini0/GeneMapper2Familias"&gt;GeneMapper2Familias&lt;/a&gt;: STR to Familias automation pipeline.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/sbiagini0/PedigreeOverTime"&gt;PedigreeOverTime&lt;/a&gt;: Chronological pedigree evolution with parallel simulations.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="-tech--tools"&gt;⚙️ Tech &amp;amp; Tools&lt;/h2&gt;
-&lt;h3 id="-programming--scripting"&gt;🖥️ Programming &amp;amp; Scripting&lt;/h3&gt;
-&lt;p class="badges"&gt;
-&lt;img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python"&gt;
-&lt;img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="R"&gt;
-&lt;img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&amp;logo=gnubash&amp;logoColor=white" alt="Bash"&gt;
-&lt;/p&gt;</description></item><item><title>KinshipAssembly: Genetic Comparison for MPI/DVI Workflows</title><link>https://sbiagini0.github.io/posts/kinshipassembly/</link><pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/posts/kinshipassembly/</guid><description>KinshipAssembly is an open-source Shiny application that automates all-vs-all STR-based kinship comparisons between MPI/DVI families and POI Component pedigrees</description></item><item><title>From STRs to SNP Panels: Modern Techniques in the Genetic Identification of Missing Persons</title><link>https://sbiagini0.github.io/posts/from-str-to-snp/</link><pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/posts/from-str-to-snp/</guid><description>&lt;h2 id="-introduction"&gt;🧬 Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sebastián Biagini</title><link>https://sbiagini0.github.io/</link><description>Recent content on Sebastián Biagini</description><generator>Hugo -- 0.161.0</generator><language>en-US</language><lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://sbiagini0.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>KinshipAssembly: Genetic Comparison for MPI/DVI Workflows</title><link>https://sbiagini0.github.io/posts/kinshipassembly/</link><pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/posts/kinshipassembly/</guid><description>KinshipAssembly is an open-source Shiny application that automates all-vs-all STR-based kinship comparisons between MPI/DVI families and POI Component pedigrees</description></item><item><title>From STRs to SNP Panels: Modern Techniques in the Genetic Identification of Missing Persons</title><link>https://sbiagini0.github.io/posts/from-str-to-snp/</link><pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/posts/from-str-to-snp/</guid><description>&lt;h2 id="-introduction"&gt;🧬 Introduction&lt;/h2&gt;
 &lt;p&gt;In forensic genetics, &lt;strong&gt;Short Tandem Repeats (STRs)&lt;/strong&gt; have been the key of human identification for over two decades.&lt;br&gt;
 Current forensic systems typically use &lt;strong&gt;24 autosomal STR markers&lt;/strong&gt;, forming the global standard for paternity testing, missing person identification (MPI) and disaster victim identification (DVI).&lt;/p&gt;
 &lt;p&gt;However, the field is now &lt;strong&gt;gradually migrating toward high-density Single Nucleotide Polymorphism (SNP) technologies&lt;/strong&gt;.&lt;br&gt;
@@ -41,4 +10,36 @@ rearrangements. Most are neutral and do not directly affect the
 organism, but they are transmitted to offspring and accumulate over
 time. These mutations are the &lt;strong&gt;primary source of genetic variability&lt;/strong&gt;,
 and their effects are complemented by other fundamental processes in
-population genetics:&lt;/p&gt;</description></item></channel></rss>
+population genetics:&lt;/p&gt;</description></item><item><title>About</title><link>https://sbiagini0.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sbiagini0.github.io/about/</guid><description>&lt;h2 id="about-me"&gt;About Me&lt;/h2&gt;
+&lt;p&gt;Biologist focused on &lt;strong&gt;forensic genetics&lt;/strong&gt;, &lt;strong&gt;kinship analysis&lt;/strong&gt;, and &lt;strong&gt;computational workflows&lt;/strong&gt; for reproducible research.&lt;/p&gt;
+&lt;h2 id="selected-projects"&gt;Selected Projects&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/sbiagini0/KinshipAssembly"&gt;KinshipAssembly&lt;/a&gt;&lt;br&gt;
+Open-source Shiny application that automates all-vs-all STR-based kinship comparisons between MPI/DVI families and POI Component pedigrees.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="education"&gt;Education&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;M.Sc. in Data Mining and Knowledge Discovery&lt;/strong&gt;, FCEN &amp;amp; FI, Universidad de Buenos Aires. 2026-present&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Science: Applications in Biology and Medicine with Python and R&lt;/strong&gt;, Universidad de Barcelona. 2024&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;B.Sc in Biological Sciences&lt;/strong&gt;, FCEN, Universidad de Buenos Aires. 2012-2018&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="technical-stack"&gt;Technical Stack&lt;/h2&gt;
+&lt;p class="badges"&gt;
+&lt;img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python"&gt;
+&lt;img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="R"&gt;
+&lt;img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&amp;logo=gnubash&amp;logoColor=white" alt="Bash"&gt;
+&lt;img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white" alt="pandas"&gt;
+&lt;img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&amp;logo=numpy&amp;logoColor=white" alt="NumPy"&gt;
+&lt;img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&amp;logo=scikit-learn&amp;logoColor=white" alt="scikit-learn"&gt;
+&lt;img src="https://img.shields.io/badge/tidyverse-1A162D?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="tidyverse"&gt;
+&lt;img src="https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="ggplot2"&gt;
+&lt;img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&amp;logo=plotly&amp;logoColor=white" alt="Plotly"&gt;
+&lt;img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git"&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"&gt;
+&lt;img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&amp;logo=jupyter&amp;logoColor=white" alt="Jupyter"&gt;
+&lt;img src="https://img.shields.io/badge/RStudio-75AADB?style=for-the-badge&amp;logo=rstudio&amp;logoColor=white" alt="RStudio"&gt;
+&lt;img src="https://img.shields.io/badge/RMarkdown-2C3E50?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="RMarkdown"&gt;
+&lt;img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&amp;logo=windows&amp;logoColor=white" alt="Windows"&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&amp;logo=linux&amp;logoColor=black" alt="Linux"&gt;
+&lt;img src="https://img.shields.io/badge/WSL-0A97F5?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="WSL"&gt;
+&lt;/p&gt;</description></item></channel></rss>
