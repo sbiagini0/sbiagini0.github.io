@@ -1051,6 +1051,7 @@ body.dark.list {
   color: var(--text-main);
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: baseline;
   gap: 0.45rem 0.75rem;
 }
