@@ -2,10 +2,12 @@
 title: "Acerca de"
 layout: "page"
 translationKey: about
+hideMeta: true
+sectionPageHeader: true
 ---
 ## Sobre mí
 
-Biólogo enfocado en **genética forense**, **análisis de parentesco** y **flujos computacionales** para investigación reproducible.
+Biólogo enfocado en **genética forense**, **análisis de parentesco** y **flujos de trabajo computacionales** para investigación reproducible.
 
 ## Proyectos destacados
 
@@ -44,8 +46,10 @@ Biólogo enfocado en **genética forense**, **análisis de parentesco** y **fluj
 
 <a href="https://orcid.org/0009-0005-4781-4698" class="orcid-card" target="_blank" rel="noopener noreferrer me" title="Registro ORCID">
   <span class="orcid-card__icon" aria-hidden="true">
+    <!-- Verde oficial ORCID #A6CE39; glifo “iD” como en el icono verde de marca -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" focusable="false" aria-label="ORCID iD" overflow="visible">
       <circle cx="128" cy="128" r="128" fill="#A6CE39"/>
+      <!-- Centro real del círculo: el baseline “central” suele quedar alto en <text>; “middle” + grupo suele verse centrado -->
       <g transform="translate(128 131)">
         <text text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="100" font-weight="700" letter-spacing="-3">iD</text>
       </g>
@@ -58,22 +62,27 @@ Biólogo enfocado en **genética forense**, **análisis de parentesco** y **fluj
 </a>
 
 - Herrera Piñero M, **Biagini S**, et al. (2026).  
-  *Addressing complex kinship and incidental findings in MPI/DVI databases using SNP panels to strengthen casework reporting*. **Forensic Science International: Genetics** (artículo de revista).
+  *Addressing complex kinship and incidental findings in MPI/DVI databases using SNP panels to strengthen casework reporting*. **Forensic Science International: Genetics**.  
+  DOI: [10.1016/j.fsigen.2026.103511](https://doi.org/10.1016/j.fsigen.2026.103511)
 
 - Costa C, Álvarez JC, Angeletti S, **Biagini S**, Caputo M, Carnevali E, Castillo MI, et al. (2026).  
-  *Statistical interpretation of cases involving mixtures: A Spanish and Portuguese-Speaking Working Group (GHEP-ISFG) collaborative exercise*. **Forensic Science International: Genetics** (artículo de revista).
+  *Statistical interpretation of cases involving mixtures: A Spanish and Portuguese-Speaking Working Group (GHEP-ISFG) collaborative exercise*. **Forensic Science International: Genetics**.  
+  DOI: [10.1016/j.fsigen.2025.103383](https://doi.org/10.1016/j.fsigen.2025.103383)
 
 - **Biagini S**, Canteros MS, Ginart S, Rabitti L, Gagliardi F, Furman N, Herrera Piñero M. (2025).  
-  *Allele frequencies of 24 STR autosomal markers in Argentina*. **Molecular Biology Reports** (artículo de revista).
+  *Allele frequencies of 24 STR autosomal markers in Argentina*. **Molecular Biology Reports**.  
+  DOI: [10.1007/s11033-025-10718-6](https://doi.org/10.1007/s11033-025-10718-6)
 
 - *Use of 3915 kinship SNPs-microarrays in missing person identification in the absence of two generations*. (2025).  
-  Capítulo de libro, pp. 341–347.
+  **30th Congress of the International Society of Forensic Genetics - Proceedings**. Capítulo de libro, pp. 341–347.  
+  DOI (capítulo): [10.15304/cc.2025.1869](https://doi.org/10.15304/cc.2025.1869)
 
 - Iungman M, **Biagini S**, Canteros M, Rabitti L, Maggiore J, Samsonowicz T, Herrera Piñero M. (2022).  
-  *Empirical validation of a family-member prioritization approach to maximize statistical power in missing person cases*. **Forensic Science International: Genetics Supplement Series**.
+  *Empirical validation of a family-member prioritization approach to maximize statistical power in missing person cases*. **Forensic Science International: Genetics Supplement Series**.  
+  DOI: [10.1016/j.fsigss.2022.10.059](https://doi.org/10.1016/j.fsigss.2022.10.059)
 
-- **Biagini S**. (2021).  
-  *Implicancias de la antropología y genética forenses en el análisis de restos humanos con fines identificatorios: el caso del Banco Nacional de Datos Genéticos (BNDG)*. **Revista Internacional de Antropología y Odontología Forense**.
+- Miranda De Zela P., Raices Montero C., Bozzo W., Samsonowicz T., Maggiore J., **Biagini S.**, Herrera Piñero M. (2021).  
+  *Implicancias de la antropología y genética forenses en el análisis de restos humanos con fines identificatorios: el caso del Banco Nacional de Datos Genéticos (BNDG)*. **Revista Internacional de Antropología y Odontología Forense**. Volumen 4, n.º 2
 
 ## Contacto
 

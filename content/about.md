@@ -3,6 +3,8 @@ title: "About"
 layout: "page"
 url: "/about/"
 translationKey: about
+hideMeta: true
+sectionPageHeader: true
 ---
 ## About Me
 
@@ -61,22 +63,27 @@ Biologist focused on **forensic genetics**, **kinship analysis**, and **computat
 </a>
 
 - Herrera Piñero M, **Biagini S**, et al. (2026).  
-  *Addressing complex kinship and incidental findings in MPI/DVI databases using SNP panels to strengthen casework reporting*. **Forensic Science International: Genetics** (Journal article).
+  *Addressing complex kinship and incidental findings in MPI/DVI databases using SNP panels to strengthen casework reporting*. **Forensic Science International: Genetics**.  
+  DOI: [10.1016/j.fsigen.2026.103511](https://doi.org/10.1016/j.fsigen.2026.103511)
 
 - Costa C, Álvarez JC, Angeletti S, **Biagini S**, Caputo M, Carnevali E, Castillo MI, et al. (2026).  
-  *Statistical interpretation of cases involving mixtures: A Spanish and Portuguese-Speaking Working Group (GHEP-ISFG) collaborative exercise*. **Forensic Science International: Genetics** (Journal article).
+  *Statistical interpretation of cases involving mixtures: A Spanish and Portuguese-Speaking Working Group (GHEP-ISFG) collaborative exercise*. **Forensic Science International: Genetics**.  
+  DOI: [10.1016/j.fsigen.2025.103383](https://doi.org/10.1016/j.fsigen.2025.103383)
 
 - **Biagini S**, Canteros MS, Ginart S, Rabitti L, Gagliardi F, Furman N, Herrera Piñero M. (2025).  
-  *Allele frequencies of 24 STR autosomal markers in Argentina*. **Molecular Biology Reports** (Journal article).
+  *Allele frequencies of 24 STR autosomal markers in Argentina*. **Molecular Biology Reports**.  
+  DOI: [10.1007/s11033-025-10718-6](https://doi.org/10.1007/s11033-025-10718-6)
 
 - *Use of 3915 kinship SNPs-microarrays in missing person identification in the absence of two generations*. (2025).  
-  Book chapter, pp. 341-347.
+  **30th Congress of the International Society of Forensic Genetics - Proceedings**. Book chapter, pp. 341-347.  
+  DOI (chapter): [10.15304/cc.2025.1869](https://doi.org/10.15304/cc.2025.1869)
 
 - Iungman M, **Biagini S**, Canteros M, Rabitti L, Maggiore J, Samsonowicz T, Herrera Piñero M. (2022).  
-  *Empirical validation of a family-member prioritization approach to maximize statistical power in missing person cases*. **Forensic Science International: Genetics Supplement Series**.
+  *Empirical validation of a family-member prioritization approach to maximize statistical power in missing person cases*. **Forensic Science International: Genetics Supplement Series**.  
+  DOI: [10.1016/j.fsigss.2022.10.059](https://doi.org/10.1016/j.fsigss.2022.10.059)
 
 - Miranda De Zela P.,Raices Montero C., Bozzo W., Samsonowicz T., Maggiore J., **Biagini S.**, Herrera Piñero M.. (2021).  
-  *Implicancias de la antropología y genética forenses en el análisis de restos humanos con fines identificatorios: el caso del Banco Nacional de Datos Genéticos (BNDG)*. **Revista Internacional de Antropología y Odontología Forense**.
+  *Implicancias de la antropología y genética forenses en el análisis de restos humanos con fines identificatorios: el caso del Banco Nacional de Datos Genéticos (BNDG)*. **Revista Internacional de Antropología y Odontología Forense**. Volume 4, N° 2
 
 ## Contact
 

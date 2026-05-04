@@ -2,15 +2,15 @@ defaultContentLanguage: en
 
 languages:
   en:
-    languageCode: en-us
-    languageName: English
     locale: en-US
     label: English
     weight: 1
     title: Sebastián Biagini
     params:
       profileMode:
-        subtitle: 'Forensic genetics, kinship analysis, and computational biology. I build reproducible tools, publish technical notes, and document applied workflows.'
+        subtitle: |
+          Forensic genetics, kinship analysis, and biology.
+          I write about the tools I build, the workflows I use, and the problems I run into along the way.
     menu:
       main:
         - identifier: home
@@ -31,15 +31,15 @@ languages:
           weight: 4
 
   es:
-    languageCode: es-es
-    languageName: Español
     locale: es-ES
     label: Español
     weight: 2
     title: Sebastián Biagini
     params:
       profileMode:
-        subtitle: 'Genética forense, análisis de parentesco y biología computacional. Desarrollo herramientas reproducibles, notas técnicas y flujos de trabajo aplicados.'
+        subtitle: |
+          Genética forense, análisis de parentesco y biología.
+          Escribo sobre las herramientas que desarrollo, los flujos de trabajo que utilizo y los problemas que encuentro en el camino.
     menu:
       main:
         - identifier: home
