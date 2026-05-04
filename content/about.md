@@ -10,14 +10,8 @@ Biologist focused on **forensic genetics**, **kinship analysis**, and **computat
 
 ## Selected Projects
 
-- [ParallelForensicLR](https://github.com/sbiagini0/ParallelForensicLR)  
-  Parallel likelihood ratio computation for forensic genetics workflows.
-
-- [GeneMapper2Familias](https://github.com/sbiagini0/GeneMapper2Familias)  
-  Automation pipeline to transform GeneMapper outputs into Familias-ready inputs.
-
-- [PedigreeOverTime](https://github.com/sbiagini0/PedigreeOverTime)  
-  Simulation framework for chronological pedigree evolution and scenario analysis.
+- [KinshipAssembly](https://github.com/sbiagini0/KinshipAssembly)  
+  Open-source Shiny application that automates all-vs-all STR-based kinship comparisons between MPI/DVI families and POI Component pedigrees.
 
 ## Education
 
@@ -81,7 +75,7 @@ Biologist focused on **forensic genetics**, **kinship analysis**, and **computat
 - Iungman M, **Biagini S**, Canteros M, Rabitti L, Maggiore J, Samsonowicz T, Herrera Piñero M. (2022).  
   *Empirical validation of a family-member prioritization approach to maximize statistical power in missing person cases*. **Forensic Science International: Genetics Supplement Series**.
 
-- **Biagini S**. (2021).  
+- Miranda De Zela P.,Raices Montero C., Bozzo W., Samsonowicz T., Maggiore J., **Biagini S.**, Herrera Piñero M.. (2021).  
   *Implicancias de la antropología y genética forenses en el análisis de restos humanos con fines identificatorios: el caso del Banco Nacional de Datos Genéticos (BNDG)*. **Revista Internacional de Antropología y Odontología Forense**.
 
 ## Contact

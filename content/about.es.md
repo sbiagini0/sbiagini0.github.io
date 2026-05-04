@@ -9,14 +9,8 @@ Biólogo enfocado en **genética forense**, **análisis de parentesco** y **fluj
 
 ## Proyectos destacados
 
-- [ParallelForensicLR](https://github.com/sbiagini0/ParallelForensicLR)  
-  Cálculo paralelo de ratios de verosimilitud para flujos de genética forense.
-
-- [GeneMapper2Familias](https://github.com/sbiagini0/GeneMapper2Familias)  
-  Pipeline de automatización para transformar salidas de GeneMapper en entradas listas para Familias.
-
-- [PedigreeOverTime](https://github.com/sbiagini0/PedigreeOverTime)  
-  Marco de simulación para evolución cronológica de pedigríes y análisis de escenarios.
+- [KinshipAssembly](https://github.com/sbiagini0/KinshipAssembly)  
+  Aplicación Shiny de código abierto que automatiza comparaciones de parentesco STR todas contra todas entre familias MPI/DVI y pedigríes de componentes POI.
 
 ## Formación
 

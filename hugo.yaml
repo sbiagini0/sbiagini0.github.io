@@ -2,6 +2,8 @@ defaultContentLanguage: en
 
 languages:
   en:
+    languageCode: en-us
+    languageName: English
     locale: en-US
     label: English
     weight: 1
@@ -29,6 +31,8 @@ languages:
           weight: 4
 
   es:
+    languageCode: es-es
+    languageName: Español
     locale: es-ES
     label: Español
     weight: 2
